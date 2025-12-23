@@ -38,7 +38,7 @@ languages:
           weight: 1
         - name: Notes
           url: "/notes/"
-          weight = 2
+          weight: 2
         # - name: Archive
         #   url: archives
         #   weight: 5
