@@ -2,8 +2,8 @@
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://www.sandokokosen.com/notes/"
 canonifyURLs: true
-title: "Notes by Sandoko Kosen [DRAFT]"
-copyright: "© 2020-2025, Sandoko Kosen. All Rights Reserved"
+title: "Notes by Sandoko Kosen"
+copyright: "Copyright © 2020-2025, Sandoko Kosen. All Rights Reserved"
 theme: [hugo-PaperMod]
 
 enableInlineShortcodes: true
@@ -33,12 +33,12 @@ languages:
       series: series
     menu:
       main:
-        - name: Home
+        - name: Base Home
           url: "https://www.sandokokosen.com/"
           weight: 1
-        - name: Notes
-          url: "/notes/"
-          weight: 2
+        # - name: Notes
+        #   url: "https://sandokokosen.github.io/" # TO BE UPDATED
+        #   weight: 2
         # - name: Archive
         #   url: archives
         #   weight: 5
@@ -52,40 +52,21 @@ languages:
         #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
-    params:
-      # languageAltTitle: French
-      profileMode:
-        enabled: true
-        title: Notes by Sandoko Kosen
-        imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
-        imageTitle: ProfileMode image
-        # imageWidth: 120
-        # imageHeight: 120
-        subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-        buttons:
-          - name: Blog
-            url: posts
-          - name: Profile Mode
-            url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
-
-  # fa:
-  #   languagedirection: rtl
-  #   weight: 3
-  #   title: PaperMod RTL
-  #   taxonomies:
-  #     category: FAcategories
-  #     tag: FAtags
-  #     series: FAseries
-  #   menu:
-  #     main:
-  #       - name: FATags
-  #         url: fatags
-  #         weight: 10
-  #   # custom params for each language should be under [langcode].parms - hugo v0.120.0
-  #   params:
-  #     homeInfoParams:
-  #       Title: "Hi there \U0001F44B"
-  #       Content: Welcome to RTL layout
+    # params:
+    #   # languageAltTitle: French
+    #   profileMode:
+    #     enabled: true
+    #     title: Notes by Sandoko Kosen
+    #     # imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+    #     # imageTitle: ProfileMode image
+    #     # imageWidth: 120
+    #     # imageHeight: 120
+    #     subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+    #     buttons:
+    #       - name: Blog
+    #         url: posts
+    #       - name: Profile Mode
+    #         url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
 
 outputs:
   home:
