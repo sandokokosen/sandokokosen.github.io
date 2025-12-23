@@ -33,12 +33,12 @@ languages:
       series: series
     menu:
       main:
-        - name: Base Home
+        - name: About
           url: "https://www.sandokokosen.com/"
           weight: 1
-        # - name: Notes
-        #   url: "https://sandokokosen.github.io/" # TO BE UPDATED
-        #   weight: 2
+        - name: Posts
+          url: "posts" # TO BE UPDATED
+          weight: 2
         # - name: Archive
         #   url: archives
         #   weight: 5
@@ -110,9 +110,9 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Hello"
+    Title: "Welcome"
     Content: >
-      👋 Hello World
+      👋 You can find collection of notes and ramblings I have in my mind. These are mostly notes I write for myself and would like to come back to in the future. However, I hope you find it useful too. If you have any feedback or enjoy the content, please let me know.
 
   # socialIcons:
   #   - name: github
