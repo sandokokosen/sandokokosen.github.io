@@ -37,7 +37,7 @@ languages:
           url: "https://www.sandokokosen.com/"
           weight: 1
         - name: Posts
-          url: "posts" # TO BE UPDATED
+          url: posts # TO BE UPDATED
           weight: 2
         # - name: Archive
         #   url: archives
