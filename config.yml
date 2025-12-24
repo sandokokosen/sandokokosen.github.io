@@ -110,9 +110,11 @@ params:
         url: tags
 
   homeInfoParams:
-    Title: "Welcome"
+    Title: "👋 Welcome"
     Content: >
-      👋 You can find collection of notes and ramblings I have in my mind. These are mostly notes I write for myself and would like to come back to in the future. However, I hope you find it useful too. If you have any feedback or enjoy the content, please let me know.
+      This is a personal archive of thoughts, notes, and occasional ramblings. I keep these here so I don't forget them, but you are more than welcome to explore. 
+
+      If you find something useful, feel free to share them. If you have feedback to share, please reach out somehow.
 
   # socialIcons:
   #   - name: github

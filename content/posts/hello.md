@@ -1,9 +1,9 @@
 ---
 author: ["Sandoko Kosen"]
-title: "Hello again"
+title: "Hello title"
 date: "2025-12-24"
-description: "Hello"
-summary: "Hello"
+description: "Hello description"
+summary: "Hello summary"
 tags: ["helloworld"]
 draft: false
 # categories: ["themes", "syntax"]
@@ -14,7 +14,7 @@ TocOpen: true
 #   fediverse_creator: "@adityatelange@mastodon.social"
 ---
 
-# Hello
+# Hello heading
 
-Hello again
+Hello text
 
