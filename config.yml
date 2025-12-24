@@ -78,6 +78,9 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   description: "Notes by Sandoko Kosen"
   author: Sandoko Kosen
+  label:
+    text: "Notes by Sandoko Kosen" # The text you want in the top left
+    link: "https://www.sandokokosen.com/notes/" # The target URL
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
