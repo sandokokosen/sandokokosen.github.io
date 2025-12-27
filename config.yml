@@ -39,6 +39,9 @@ languages:
         - name: Posts
           url: posts # TO BE UPDATED
           weight: 2
+        - name: Magnons
+          url: /notes/magnon_damping/
+          weight: 3
         # - name: Archive
         #   url: archives
         #   weight: 5
