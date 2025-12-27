@@ -1,210 +1,294 @@
-# If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
-# contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "https://www.sandokokosen.com/notes/"
-canonifyURLs: true
-title: "Notes by Sandoko Kosen"
-copyright: "Copyright © 2020-2025, Sandoko Kosen. All Rights Reserved"
-theme: [hugo-bearcub]
+# Basic config
+baseURL = "https://www.sandokokosen.github.io"
+theme = "hugo-bearcub"
+copyright = "Copyright © 2020-2025, Sandoko Kosen. All Rights Reserved"
+defaultContentLanguage = "en"
 
-enableInlineShortcodes: true
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
-enableEmoji: true
-pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
+# Generate a nice robots.txt for SEO
+enableRobotsTXT = true
 
-minify:
-  disableXML: true
-  # minifyOutput: true
+# Setup syntax highlighting without inline styles. For more information about
+# why you'd want to avoid inline styles, see
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles
+[markup]
+  [markup.highlight]
+    lineNos = true
+    lineNumbersInTable = false
+    # This allows Bear Cub to use a variation of Dracula that is more accessible
+    # to people with poor eyesight. For more information about color contrast
+    # and accessibility, see https://web.dev/color-and-contrast-accessibility/
+    noClasses = false
 
-pagination:
-  disableAliases: false
-  pagerSize: 5
+# Multilingual mode config. More for information about how to setup translation,
+# see https://gohugo.io/content-management/multilingual/
+[languages]
+  [languages.en]
+    title = "Bear Cub"
+    languageName = "en-US 🇺🇸"
+    LanguageCode = "en-US"
+    contentDir = "content"
+    [languages.en.params]
+      madeWith = "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
 
-languages:
-  en:
-    languageName: "English"
-    weight: 1
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
-    menu:
-      main:
-        - name: About
-          url: "https://www.sandokokosen.com/"
-          weight: 1
-        - name: Posts
-          url: posts # TO BE UPDATED
-          weight: 2
-        - name: Magnons
-          url: /notes/magnon_damping/
-          weight: 3
-        # - name: Archive
-        #   url: archives
-        #   weight: 5
-        # - name: Search
-        #   url: search/
-        #   weight: 10
-        # - name: Tags
-        #   url: tags/
-        #   weight: 10
-        # - name: WiKi
-        #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+[params]
+  # The description of your website
+  description = "Notes by Sandoko Kosen"
 
-    # custom params for each language should be under [langcode].parms - hugo v0.120.0
-    # params:
-    #   # languageAltTitle: French
-    #   profileMode:
-    #     enabled: true
-    #     title: Notes by Sandoko Kosen
-    #     # imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
-    #     # imageTitle: ProfileMode image
-    #     # imageWidth: 120
-    #     # imageHeight: 120
-    #     subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
-    #     buttons:
-    #       - name: Blog
-    #         url: posts
-    #       - name: Profile Mode
-    #         url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+  # The path to your favicon
+  favicon = "images/SK_favicon.png"
 
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
+  # # These images will show up when services want to generate a preview of a link
+  # # to your site. Ignored if `generateSocialCard = true`. For more information
+  # # about previews, see https://gohugo.io/templates/internal#twitter-cards and
+  # # https://gohugo.io/templates/internal#open-graph
+  # images = ["images/share.webp"]
 
-params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Notes by Sandoko Kosen"
-  author: Sandoko Kosen
-  label:
-    text: "Notes by Sandoko Kosen" # The text you want in the top left
-    link: "https://www.sandokokosen.com/notes/" # The target URL
-  # author: ["Me", "You"] # multiple authors
+  # This title is used as the site_name on the Hugo's internal opengraph
+  # structured data template
+  title = "Notes by Sandoko"
 
-  defaultTheme: auto
-  # disableThemeToggle: true
-  ShowShareButtons: true
-  ShowReadingTime: true
-  # disableSpecial1stPost: true
-  displayFullLangName: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
-  ShowAllPagesInArchive: true
-  ShowPageNums: true
-  ShowToc: true
-  # comments: false
-  images: ["images/papermod-cover.png"]
+  # Dates are displayed following the format below. For more information about
+  # formatting, see https://gohugo.io/functions/format/
+  dateFormat = "2025-12-28"
 
-  profileMode:
-    enabled: false
-    title: PaperMod
-    imageUrl: "#"
-    imageTitle: my image
-    # imageWidth: 120
-    # imageHeight: 120
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
+  # If your blog is multilingual but you haven't translated a page, this theme
+  # will create a disabled link. By setting `hideUntranslated` to true, you can
+  # have the theme simply not show any link
+  hideUntranslated = false
 
-  homeInfoParams:
-    Title: "👋 Welcome"
-    Content: >
-      This is a personal archive of thoughts, notes, and occasional ramblings. I keep these here so I don't forget them, but you are more than welcome to explore. 
+  # (EXPERIMENTAL) This theme has two options for its CSS styles: "original" and
+  # "herman". The former is what you see on Bear Cub's demo (an optimized
+  # version of Hugo Bear Blog), while the latter has a more modern look based on
+  # Herman Martinus's version of the Blogster Minimal theme for Astro.
+  themeStyle = "original"
 
-      If you find something useful, feel free to share them. If you have feedback to share, please reach out somehow.
+  # (EXPERIMENTAL) This theme is capable of dynamically generating social cards
+  # for posts that don't have `images` defined in their front matter; By setting
+  # `generateSocialCard` to false, you can prevent this behavior. For more
+  # information see layouts/partials/social_card.html
+  generateSocialCard = true
 
-  # socialIcons:
-  #   - name: github
-  #     title: View Source on Github
-  #     url: "https://github.com/adityatelange/hugo-PaperMod"
-  #   - name: Discord
-  #     title: Join discord community
-  #     url: "https://discord.gg/ahpmTvhVmp"
-  #   - name: X
-  #     title: Share PaperMod on X/Twitter
-  #     url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
-  #   - name: KoFi
-  #     title: Buy me a Ko-Fi :)
-  #     url: "https://ko-fi.com/adityatelange"
+  # Social media. Delete any item you aren't using to make sure it won't show up
+  # in your website's metadata.
+  [params.social]
+    twitter = "example" # Twitter handle (without '@')
+    # facebook_admin = "0000000000" # Facebook Page Admin ID
 
-  # editPost:
-  #   URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
-  #   Text: "Suggest Changes" # edit text
-  #   appendFilePath: true # to append file path to Edit link
+  # Author metadata. This is mostly used for the RSS feed of your site, but the
+  # email is also added to the footer of each post. You can hide the "reply to"
+  # link by using a `hideReply` param in front matter.
+  [params.author]
+    name = "Sandoko Kosen" # Your name as shown in the RSS feed metadata
+    # email = "me@example.com" # Added to the footer so readers can reply to posts
 
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
+# # THE FOLLOWING IS FOR PAPERMOD
+# # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
+# # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+# baseURL: "https://www.sandokokosen.com/notes/"
+# canonifyURLs: true
+# title: "Notes by Sandoko Kosen"
+# copyright: "Copyright © 2020-2025, Sandoko Kosen. All Rights Reserved"
+# theme: [hugo-PaperMod]
 
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
+# enableInlineShortcodes: true
+# enableRobotsTXT: true
+# buildDrafts: false
+# buildFuture: false
+# buildExpired: false
+# enableEmoji: true
+# pygmentsUseClasses: true
+# mainsections: ["posts", "papermod"]
 
-  assets:
-    disableHLJS: true
-  #     favicon: "<link / abs url>"
-  #     favicon16x16: "<link / abs url>"
-  #     favicon32x32: "<link / abs url>"
-  #     apple_touch_icon: "<link / abs url>"
-  #     safari_pinned_tab: "<link / abs url>"
+# minify:
+#   disableXML: true
+#   # minifyOutput: true
 
-  # cover:
-  #     hidden: true # hide everywhere but not in structured data
-  #     hiddenInList: true # hide on list pages and home
-  #     hiddenInSingle: true # hide on single page
+# pagination:
+#   disableAliases: false
+#   pagerSize: 5
 
-  # fuseOpts:
-  #     isCaseSensitive: false
-  #     shouldSort: true
-  #     location: 0
-  #     distance: 1000
-  #     threshold: 0.4
-  #     minMatchCharLength: 0
-  #     keys: ["title", "permalink", "summary", "content"]
+# languages:
+#   en:
+#     languageName: "English"
+#     weight: 1
+#     taxonomies:
+#       category: categories
+#       tag: tags
+#       series: series
+#     menu:
+#       main:
+#         - name: About
+#           url: "https://www.sandokokosen.com/"
+#           weight: 1
+#         - name: Posts
+#           url: posts # TO BE UPDATED
+#           weight: 2
+#         - name: Magnons
+#           url: /notes/magnon_damping/
+#           weight: 3
+#         # - name: Archive
+#         #   url: archives
+#         #   weight: 5
+#         # - name: Search
+#         #   url: search/
+#         #   weight: 10
+#         # - name: Tags
+#         #   url: tags/
+#         #   weight: 10
+#         # - name: WiKi
+#         #   url: https://github.com/adityatelange/hugo-PaperMod/wiki/
 
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
-  highlight:
-    noClasses: false
-    # anchorLineNos: true
-    # codeFences: true
-    # guessSyntax: true
-    # lineNos: true
-    # style: monokai
+#     # custom params for each language should be under [langcode].parms - hugo v0.120.0
+#     # params:
+#     #   # languageAltTitle: French
+#     #   profileMode:
+#     #     enabled: true
+#     #     title: Notes by Sandoko Kosen
+#     #     # imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+#     #     # imageTitle: ProfileMode image
+#     #     # imageWidth: 120
+#     #     # imageHeight: 120
+#     #     subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+#     #     buttons:
+#     #       - name: Blog
+#     #         url: posts
+#     #       - name: Profile Mode
+#     #         url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
 
-# privacy:
-#   vimeo:
-#     disabled: false
-#     simple: true
+# outputs:
+#   home:
+#     - HTML
+#     - RSS
+#     - JSON
 
-#   twitter:
-#     disabled: false
-#     enableDNT: true
-#     simple: true
+# params:
+#   env: production # to enable google analytics, opengraph, twitter-cards and schema.
+#   description: "Notes by Sandoko Kosen"
+#   author: Sandoko Kosen
+#   label:
+#     text: "Notes by Sandoko Kosen" # The text you want in the top left
+#     link: "https://www.sandokokosen.com/notes/" # The target URL
+#   # author: ["Me", "You"] # multiple authors
 
+#   defaultTheme: auto
+#   # disableThemeToggle: true
+#   ShowShareButtons: true
+#   ShowReadingTime: true
+#   # disableSpecial1stPost: true
+#   displayFullLangName: true
+#   ShowPostNavLinks: true
+#   ShowBreadCrumbs: true
+#   ShowCodeCopyButtons: true
+#   ShowRssButtonInSectionTermList: true
+#   ShowAllPagesInArchive: true
+#   ShowPageNums: true
+#   ShowToc: true
+#   # comments: false
+#   images: ["images/papermod-cover.png"]
+
+#   profileMode:
+#     enabled: false
+#     title: PaperMod
+#     imageUrl: "#"
+#     imageTitle: my image
+#     # imageWidth: 120
+#     # imageHeight: 120
+#     buttons:
+#       - name: Archives
+#         url: archives
+#       - name: Tags
+#         url: tags
+
+#   homeInfoParams:
+#     Title: "👋 Welcome"
+#     Content: >
+#       This is a personal archive of thoughts, notes, and occasional ramblings. I keep these here so I don't forget them, but you are more than welcome to explore. 
+
+#       If you find something useful, feel free to share them. If you have feedback to share, please reach out somehow.
+
+#   # socialIcons:
+#   #   - name: github
+#   #     title: View Source on Github
+#   #     url: "https://github.com/adityatelange/hugo-PaperMod"
+#   #   - name: Discord
+#   #     title: Join discord community
+#   #     url: "https://discord.gg/ahpmTvhVmp"
+#   #   - name: X
+#   #     title: Share PaperMod on X/Twitter
+#   #     url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+#   #   - name: KoFi
+#   #     title: Buy me a Ko-Fi :)
+#   #     url: "https://ko-fi.com/adityatelange"
+
+#   # editPost:
+#   #   URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+#   #   Text: "Suggest Changes" # edit text
+#   #   appendFilePath: true # to append file path to Edit link
+
+#   # label:
+#   # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+#   # text: "Home"
+#   # icon: icon.png
+#   # iconHeight: 35
+
+#   # analytics:
+#   #     google:
+#   #         SiteVerificationTag: "XYZabc"
+
+#   assets:
+#     disableHLJS: true
+#   #     favicon: "<link / abs url>"
+#   #     favicon16x16: "<link / abs url>"
+#   #     favicon32x32: "<link / abs url>"
+#   #     apple_touch_icon: "<link / abs url>"
+#   #     safari_pinned_tab: "<link / abs url>"
+
+#   # cover:
+#   #     hidden: true # hide everywhere but not in structured data
+#   #     hiddenInList: true # hide on list pages and home
+#   #     hiddenInSingle: true # hide on single page
+
+#   # fuseOpts:
+#   #     isCaseSensitive: false
+#   #     shouldSort: true
+#   #     location: 0
+#   #     distance: 1000
+#   #     threshold: 0.4
+#   #     minMatchCharLength: 0
+#   #     keys: ["title", "permalink", "summary", "content"]
+
+# markup:
+#   goldmark:
+#     renderer:
+#       unsafe: true
+#   highlight:
+#     noClasses: false
+#     # anchorLineNos: true
+#     # codeFences: true
+#     # guessSyntax: true
+#     # lineNos: true
+#     # style: monokai
+
+# # privacy:
+# #   vimeo:
+# #     disabled: false
+# #     simple: true
+
+# #   twitter:
+# #     disabled: false
+# #     enableDNT: true
+# #     simple: true
+
+# #   instagram:
+# #     disabled: false
+# #     simple: true
+
+# #   youtube:
+# #     disabled: false
+# #     privacyEnhanced: true
+
+# services:
 #   instagram:
-#     disabled: false
-#     simple: true
-
-#   youtube:
-#     disabled: false
-#     privacyEnhanced: true
-
-services:
-  instagram:
-    disableInlineCSS: true
-  x:
-    disableInlineCSS: true
+#     disableInlineCSS: true
+#   x:
+#     disableInlineCSS: true
