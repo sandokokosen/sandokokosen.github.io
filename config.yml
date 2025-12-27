@@ -23,10 +23,20 @@ markup:
 # see https://gohugo.io/content-management/multilingual/
 languages:
   en:
-    title: "Notes by Sandoko Kosen"
+    title: "Notes by Sandoko"
     languageName: "en-US 🇺🇸"
     LanguageCode: "en-US"
     contentDir: "content"
+    menu:
+      main:
+        - name: About
+          url: "https://www.sandokokosen.com/"
+          weight: 1
+        - name: Thoughts
+          url: "/thoughts/"
+          weight: 2
+        - name: Archives
+          url: "/archives/"
     params:
       madeWith: "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
 
