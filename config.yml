@@ -29,14 +29,15 @@ languages:
     contentDir: "content"
     menu:
       main:
-        - name: About
-          url: "https://www.sandokokosen.com/"
-          weight: 1
         - name: Thoughts
           url: "/thoughts/"
-          weight: 2
+          weight: 1
         - name: Archives
           url: "/archives/"
+          weight: 2
+        - name: Profile
+          url: "https://www.sandokokosen.com/"
+          weight: 2
     params:
       madeWith: "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
 
@@ -91,6 +92,14 @@ params:
     name: "Sandoko Kosen" # Your name as shown in the RSS feed metadata
     # email: "me@example.com" # Added to the footer so readers can reply to posts
 
+outputs:
+  home:
+    - HTML
+  section:
+    - HTML
+  page:
+    - HTML
+    
 # # THE FOLLOWING IS FOR PAPERMOD
 # # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
