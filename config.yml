@@ -4,7 +4,7 @@ baseURL: "https://www.sandokokosen.com/notes/"
 canonifyURLs: true
 title: "Notes by Sandoko Kosen"
 copyright: "Copyright © 2020-2025, Sandoko Kosen. All Rights Reserved"
-theme: [hugo-PaperMod]
+theme: [hugo-bearcub]
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
