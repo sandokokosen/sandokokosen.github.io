@@ -12,6 +12,14 @@ ShowToc: true
 TocOpen: true
 math: true
 ---
+{{< math.inline >}}
+{{ if or .Page.Params.math .Site.Params.math }}
+<!-- KaTeX -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+{{ end }}
+{{</ math.inline >}}
 
 This is inline math: $E = mc^2$
 
@@ -23,15 +31,7 @@ $$ \Delta H = \frac{1}{\gamma} \frac{1}{T_2} $$
 </div>
 
 
-{{< math.inline >}}
-{{ if or .Page.Params.math .Site.Params.math }}
 
-<!-- KaTeX -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-{{ end }}
-{{</ math.inline >}}
 
 ### Examples
 
@@ -44,9 +44,12 @@ Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
 
 Block math:
 
+<a id="eq.100haha"></a>
 $$
- \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } \tag{100}
 $$
+
+[Eq. 100](#100haha)
 
 # Preface
 For my PhD, I worked on the foundation of what we would like to call as the quantum magnonics in thin film architecture. In a previous work, we learned that the cryogenic magnonic damping in such a system is higher than expected. It prompted me to eventually undertake the task of understanding the potential cause of such issue at milliKelvin temperature. It certainly wasn't an easy task to design the experiments, made sense of the results, and put it in the broader context of the existing knowledge. To this day, I am very happy for how it turned out [[Kosen2019](#Kosen2019)], and the fact that it remains regularly cited after all these years goes to show that this result is useful to the community (in a paradoxical way, I hope that this trend does not continue for too long since it signifies that no significant progress has been made, and the field stays as it was before I left).
@@ -94,9 +97,7 @@ Damping in pure YIG is known to have a linear frequency dependence at room tempe
 
 In the Kasuya-LeCraw theory, there are two processes through which the $k=0$ magnons can relax [[Kasuya1961](#Kasuya1961), [Sparks1964](#Sparks1964)]. Both of these are caused by the modulation of the local uniaxial anisotropy by a phonon [[Cherepanov1993](#Cherepanov1993)]. The first process involves the confluence of a $k=0$ magnon with an optical phonon to form a thermal magnon in the lowest branch of the magnon spectrum (referred to as the ferromagnon branch in Ref. [[Cherepanov1993](#Cherepanov1993)]). This mechanism reproduces the observed linear frequency and temperature dependences of the damping between ~150 K and 350 K; the predicted temperature dependence is shown to drop below linearity as the temperature is reduced below 150 K [[Sparks1964](#Sparks1964)]. The analytical derivation for the linewidth contribution from the first Kasuya-LeCraw process is described in Ref. [[Sparks1964](#Sparks1964)], it can be expressed as:
 $$
-\begin{align}
 \Delta H_\mathrm{KL} = \left(C_\mathrm{KL} F(T)\right)\omega,
-\end{align}
 $$
 where
 $$
