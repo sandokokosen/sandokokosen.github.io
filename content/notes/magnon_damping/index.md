@@ -10,6 +10,7 @@ draft: false
 # series: ["Themes Guide"]
 ShowToc: true
 TocOpen: true
+math: true
 ---
 
 # Preface
