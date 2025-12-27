@@ -1,41 +1,41 @@
 # Basic config
-baseURL = "https://www.sandokokosen.github.io"
-theme = "hugo-bearcub"
-copyright = "Copyright © 2020-2025, Sandoko Kosen. All Rights Reserved"
-defaultContentLanguage = "en"
+baseURL: "https://www.sandokokosen.github.io"
+theme: "hugo-bearcub"
+copyright :"Copyright © 2020-2025, Sandoko Kosen. All Rights Reserved"
+defaultContentLanguage: "en"
 
 # Generate a nice robots.txt for SEO
-enableRobotsTXT = true
+enableRobotsTXT: true
 
 # Setup syntax highlighting without inline styles. For more information about
 # why you'd want to avoid inline styles, see
 # https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/style-src#unsafe_inline_styles
-[markup]
-  [markup.highlight]
-    lineNos = true
-    lineNumbersInTable = false
+markup:
+  highlight:
+    lineNos: true
+    lineNumbersInTable: false
     # This allows Bear Cub to use a variation of Dracula that is more accessible
     # to people with poor eyesight. For more information about color contrast
     # and accessibility, see https://web.dev/color-and-contrast-accessibility/
-    noClasses = false
+    noClasses: false
 
 # Multilingual mode config. More for information about how to setup translation,
 # see https://gohugo.io/content-management/multilingual/
-[languages]
-  [languages.en]
-    title = "Bear Cub"
-    languageName = "en-US 🇺🇸"
-    LanguageCode = "en-US"
-    contentDir = "content"
-    [languages.en.params]
-      madeWith = "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
+languages:
+  en:
+    title: "Sandoko EN"
+    languageName: "en-US 🇺🇸"
+    LanguageCode: "en-US"
+    contentDir: "content"
+    params:
+      madeWith: "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
 
-[params]
+params:
   # The description of your website
-  description = "Notes by Sandoko Kosen"
+  description: "Notes by Sandoko Kosen"
 
   # The path to your favicon
-  favicon = "images/SK_favicon.png"
+  favicon: "images/SK_favicon.png"
 
   # # These images will show up when services want to generate a preview of a link
   # # to your site. Ignored if `generateSocialCard = true`. For more information
@@ -45,41 +45,41 @@ enableRobotsTXT = true
 
   # This title is used as the site_name on the Hugo's internal opengraph
   # structured data template
-  title = "Notes by Sandoko"
+  title: "Notes by Sandoko"
 
   # Dates are displayed following the format below. For more information about
   # formatting, see https://gohugo.io/functions/format/
-  dateFormat = "2025-12-28"
+  dateFormat: "2025-12-28"
 
   # If your blog is multilingual but you haven't translated a page, this theme
   # will create a disabled link. By setting `hideUntranslated` to true, you can
   # have the theme simply not show any link
-  hideUntranslated = false
+  hideUntranslated: false
 
   # (EXPERIMENTAL) This theme has two options for its CSS styles: "original" and
   # "herman". The former is what you see on Bear Cub's demo (an optimized
   # version of Hugo Bear Blog), while the latter has a more modern look based on
   # Herman Martinus's version of the Blogster Minimal theme for Astro.
-  themeStyle = "original"
+  themeStyle: "original"
 
   # (EXPERIMENTAL) This theme is capable of dynamically generating social cards
   # for posts that don't have `images` defined in their front matter; By setting
   # `generateSocialCard` to false, you can prevent this behavior. For more
   # information see layouts/partials/social_card.html
-  generateSocialCard = true
+  generateSocialCard: true
 
   # Social media. Delete any item you aren't using to make sure it won't show up
   # in your website's metadata.
-  [params.social]
-    twitter = "example" # Twitter handle (without '@')
-    # facebook_admin = "0000000000" # Facebook Page Admin ID
+  social:
+    twitter: "sandokokosen" # Twitter handle (without '@')
+    # facebook_admin: "0000000000" # Facebook Page Admin ID
 
   # Author metadata. This is mostly used for the RSS feed of your site, but the
   # email is also added to the footer of each post. You can hide the "reply to"
   # link by using a `hideReply` param in front matter.
-  [params.author]
-    name = "Sandoko Kosen" # Your name as shown in the RSS feed metadata
-    # email = "me@example.com" # Added to the footer so readers can reply to posts
+  author:
+    name: "Sandoko Kosen" # Your name as shown in the RSS feed metadata
+    # email: "me@example.com" # Added to the footer so readers can reply to posts
 
 # # THE FOLLOWING IS FOR PAPERMOD
 # # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
