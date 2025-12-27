@@ -23,7 +23,7 @@ markup:
 # see https://gohugo.io/content-management/multilingual/
 languages:
   en:
-    title: "Sandoko EN"
+    title: "Notes by Sandoko Kosen"
     languageName: "en-US 🇺🇸"
     LanguageCode: "en-US"
     contentDir: "content"
