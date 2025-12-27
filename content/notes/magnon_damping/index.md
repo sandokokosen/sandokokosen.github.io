@@ -13,6 +13,16 @@ TocOpen: true
 math: true
 ---
 
+This is inline math: $E = mc^2$
+
+This is block math:
+$$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
+
+<div>
+$$ \Delta H = \frac{1}{\gamma} \frac{1}{T_2} $$
+</div>
+
+
 # Preface
 For my PhD, I worked on the foundation of what we would like to call as the quantum magnonics in thin film architecture. In a previous work, we learned that the cryogenic magnonic damping in such a system is higher than expected. It prompted me to eventually undertake the task of understanding the potential cause of such issue at milliKelvin temperature. It certainly wasn't an easy task to design the experiments, made sense of the results, and put it in the broader context of the existing knowledge. To this day, I am very happy for how it turned out [[Kosen2019](#Kosen2019)], and the fact that it remains regularly cited after all these years goes to show that this result is useful to the community (in a paradoxical way, I hope that this trend does not continue for too long since it signifies that no significant progress has been made, and the field stays as it was before I left).
 
@@ -104,7 +114,7 @@ $$
 \Delta H_\mathrm{2m} = C_\mathrm{2m} \frac{R_\mathrm{s}}{R_0} M_\mathrm{s}
 \end{align}
 $$
-where $C_\mathrm{2m}$ is a constant related to the scattering properties of the pits and the density of states available for the relaxation process, $R_\mathrm{s}$ is the radius of the pit, $R_0$ is the radius of the sphere, and $M_\mathrm{s}$ is the saturation magnetisation. The expression shows that the linewidth contribution increases as the ratio of the pit size to the sample size is increased. Because the presence of a thermal magnon is not required to induce two-magnon processes (in contrast to contributions from the Kasuya-LeCraw and the Kolokolov-L'vov-Cherepanov processes), their contribution to the damping does not decrease with decreasing temperature. The only temperature dependence in the two-magnon case comes from the saturation magnetisation ($M_\mathrm{s}$), which increases as the temperature is decreased [[Solt1962](#Solt1962),  [Maier-Flaig2017](#Maier-Flaig2017)]. 
+where $C_\mathrm{2m}$ is a constant related to the scattering properties of the pits and the density of states available for the relaxation process, $R_\mathrm{s}$ is the radius of the pit, $R_0$ is the radius of the sphere, and $M_\mathrm{s}$ is the saturation magnetisation. The expression shows that the linewidth contribution increases as the ratio of the pit size to the sample size is increased. Because the presence of a thermal magnon is not required to induce two-magnon processes (in contrast to contributions from the Kasuya-LeCraw and the Kolokolov-L'vov-Cherepanov processes), their contribution to the damping does not decrease with decreasing temperature. The only temperature dependence in the two-magnon case comes from the saturation magnetisation ($M_\mathrm{s}$), which increases as the temperature is decreased [[Solt1962](#Solt1962), [Maier-Flaig2017](#Maier-Flaig2017)]. 
 
 In some cases, namely those in which the YIG has a very rough surface, two-magnon process can dominate over the Kasuya-LeCraw and the Kolokolov-L'vov-Cherepanov mechanisms in relaxing the $k=0$ magnons. It has been reported that the linewidth of a YIG sphere can be as low as ~$0.5 Oe if it is well polished and as high as ~10 Oe when polished with a 35-um grit size polishing paper [[LeCraw1958](#LeCraw1958)]. Reference [[Gurevich1996](#Gurevich1996)] claims that a really well polished YIG sphere can have a linewidth as low as ~0.3 Oe at room temperature. For comparison, an estimation by Sparks [[Sparks1964](#Sparks1964)] suggested that the first Kasuya-LeCraw process can contribute ~0.2 Oe (at 9 GHz frequency) to the $k=0$ magnon linewidth in YIG at room temperature. It should also be understood that two-magnon processes contribute not only to initial scattering events but to subsequent relaxation events.
 
@@ -179,7 +189,7 @@ Note that $\Omega_1$ is the only frequency-dependent term in [eq. 6](#chLT_eq_b)
     <strong>Figure 5.</strong> Temperature-dependent linewidth ($\Delta H$) contribution calculated at two different magnon frequencies ($\omega$, $2\omega$). 
     <strong>(a)</strong> Slowly-relaxing-impurity model with $\delta E=8\,\text{cm}^{-1}$, $\omega\tau_{\text{r},0}=3.3$ <a href="#Gurevich1970">[Gurevich1970]</a>. Note that the horizontal axis is logarithmic. 
     <strong>(b)</strong> Valence-exchange model with $\tau_{\text{h},0}=0.5\times10^{-13}\,\text{s}$, $E_{\text{b}}=0.2\,\text{eV}$ <a href="#Hansen1972">[Hansen1972]</a>. 
-    In both models, the saturation magnetization is modeled according to Ref. <a href="#Maier">[Maier-Flaig2017]</a>. Notice that the characteristic temperature $T_\text{ch}$ becomes higher as $\omega$ increases.
+    In both models, the saturation magnetization is modeled according to Ref. <a href="#Maier-Flaig2017">[Maier-Flaig2017]</a>. Notice that the characteristic temperature $T_\text{ch}$ becomes higher as $\omega$ increases.
   </p>
 </div>
 
@@ -350,6 +360,8 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 [<a id="Kosen2019"></a>**Kosen2019**] Kosen, S., van Loo, A.F., Bozhko, D.A., Mihalceanu, L., and Karenowska, A.D. "Microwave Magnon Damping in YIG Films at Millikelvin Temperatures." Unpublished, 2019. arXiv:1903.02527.
 
 [<a id="LeCraw1958"></a>**LeCraw1958**] LeCraw, R.C., Spencer, E.G., and Porter, C.S. "Ferromagnetic Resonance Line Width in Yttrium Iron Garnet Single Crystals." Physical Review, vol. 110, no. 6, 1958, pp. 1311–1313. doi:10.1103/PhysRev.110.1311.
+
+[<a id="Maier-Flaig2017"></a>**Maier-Flaig2017**] Maier-Flaig, H., Klingler, S., Dubs, C., Surzhenko, O., Gross, R., Weiler, M., Huebl, H., and Goennenwein, S.T.B. "Temperature Dependent Magnetic Damping of Yttrium Iron Garnet Spheres." Physical Review B, vol. 95, no. 21, 2017, p. 214423. doi:10.1103/PhysRevB.95.214423.
 
 
 [<a id="Martinis2005"></a>**Martinis2005**] Martinis, J.M., Cooper, K.B., McDermott, R., Steffen, M., Ansmann, M., Osborn, K.D., Cicak, K., Oh, S.S., Pappas, D.P., Simmonds, R.W., and Yu, C.C. "Decoherence in Josephson Qubits from Dielectric Loss." Physical Review Letters, vol. 95, no. 21, 2005, p. 210503. doi:10.1103/PhysRevLett.95.210503.
