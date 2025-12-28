@@ -26,29 +26,3 @@
   </ul>
 </main>
 {{ end }}
-
-<!-- {{ define "main" }}
-<main>
-  <h1>{{ .Title }}</h1>
-  
-  <div class="section-content">
-    {{ .Content }}
-  </div>
-
-  <ul class="blog-posts">
-    {{ range .Pages }}
-    <li>
-      <span>
-        <time datetime="{{ .Date.Format "2006-01-02" }}" pubdate>
-          {{ .Date.Format "2006-01-02" }}
-        </time>
-      </span>
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ else }}
-    <li>No posts yet.</li>
-    {{ end }}
-  </ul>
-</main>
-{{ partial "footer.html" . }} 
-{{ end }} -->
