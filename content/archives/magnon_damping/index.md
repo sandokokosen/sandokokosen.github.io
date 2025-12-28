@@ -13,37 +13,6 @@ TocOpen: true
 math: true
 ---
 
-
-This is inline math: $E = mc^2$
-
-This is block math:
-$$\sum_{i=1}^n i = \frac{n(n+1)}{2}$$
-
-<div>
-$$ \Delta H = \frac{1}{\gamma} \frac{1}{T_2} $$
-</div>
-
-
-
-
-### Examples
-
-{{< math.inline >}}
-
-<p>
-Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
-</p>
-{{</ math.inline >}}
-
-Block math:
-
-<a id="eq.100haha"></a>
-$$
- \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } \tag{100}
-$$
-
-[Eq. 100](#100haha)
-
 # Preface
 For my PhD, I worked on the foundation of what we would like to call as the quantum magnonics in thin film architecture. In a previous work, we learned that the cryogenic magnonic damping in such a system is higher than expected. It prompted me to eventually undertake the task of understanding the potential cause of such issue at milliKelvin temperature. It certainly wasn't an easy task to design the experiments, made sense of the results, and put it in the broader context of the existing knowledge. To this day, I am very happy for how it turned out [[Kosen2019](#Kosen2019)], and the fact that it remains regularly cited after all these years goes to show that this result is useful to the community (in a paradoxical way, I hope that this trend does not continue for too long since it signifies that no significant progress has been made, and the field stays as it was before I left).
 
@@ -77,7 +46,7 @@ With increasing interests in recent years in the study of microwave magnons at m
   </p>
 </div>
 
-In the following, we shall focus on the damping of uniformly precessing magnons ($k=0$) excited by a low-power external microwave field. (Figure 1)[#chLT_relproc] shows the known relaxation paths for uniformly precessing magnons in bulk YIG. 
+In the following, we shall focus on the damping of uniformly precessing magnons ($k=0$) excited by a low-power external microwave field. [Figure 1](#chLT_relproc) shows the known relaxation paths for uniformly precessing magnons in bulk YIG. 
 
 Thermal magnons are those excited by thermal fluctuations within the system. Relaxation involving thermal magnons can occur through a number of mechanisms such as scattering with optical phonons or magnons (notably through the Kasuya-LeCraw processes [[Kasuya1961](#Kasuya1961)] and Kolokolov-L'vov-Cherepanov process [[Kolokolov1985](#Kolokolov1985), [Cherepanov1993](#Cherepanov1993)]), and inherent spin-spin processes [[Gurevich1996](#Gurevich1996)]. These processes become weaker as the temperature is lowered. Degenerate magnons are thermal magnons that have the same energy as the precessional mode but possess nonzero $k$-values. A two-magnon process can relax a $k=0$ magnon to a degenerate magnon [[Gurevich1996](#Gurevich1996), [Sparks1964](#Sparks1964)]. Such interactions can be the dominant damping process across the whole temperature range. Magnon relaxation through ionic impurities occur through so-called temperature-peak processes [[Sparks1964](#Sparks1964), [Gurevich1996](#Gurevich1996)]. These typically dominate in the temperature range between ~1 K and ~150 K. Relaxation involving two-level fluctuators (TLFs) only dominates for temperatures below 1 K [[Phillips1987](#Phillips1987), [Tabuchi2014](#Tabuchi2014)].
 
@@ -281,16 +250,11 @@ Conceptually, the idea underpinning the TLF model is as follows: there are impur
 The loss tangent arising from TLFs can be modelled as [[Martinis2005](#Martinis2005)]
 <a id="chLT_eqTLS_1"></a>
 $$
-\begin{align}
 \delta_\mathrm{TLF} = C_\mathrm{TLF} \frac{\tanh{\left(\hbar\omega/2k_\mathrm{B}T\right)}}{\sqrt{1+\left(P/P_\mathrm{sat}\right)}}  
-\end{align}
 $$
 where $C_\mathrm{TLF}$ is a factor that depends on the density and the dipole strength of the TLF. As the loss tangent is the inverse of the quality factor, i.e. $1/Q=\Delta \omega/\omega \approx \delta_\mathrm{TLF}$ for $\delta_\mathrm{TLF}\ll 1$, then the linewidth contribution from the TLF is
 $$
-\begin{align}
 \Delta H_\mathrm{TLF} = \frac{\omega}{\gamma\mu_{\circ}} \delta_\mathrm{TLF} 
-% \label{chLT_eqTLS}
-\end{align}
 $$
 where $\gamma$ is the gyromagnetic ratio, and $\mu_{\circ}$ is the vacuum permeability. The power ratio within the square root of [eq. 15](#chLT_eqTLS_1) can be expressed as $\left(P/P_\mathrm{sat}\right)=\omega_\mathrm{TLF}^2\tau_1\tau_2$ where $\omega_\mathrm{TLF}$ is the Rabi frequency, $\tau_1$ and $\tau_2$ are respectively the longitudinal and transverse relaxation time constants of the TLFs. [Figure 7](#fig-TLS) shows the behaviour of $\Delta H_\mathrm{TLF}$ as a function of temperature ($T$) and power ($P$).
 
@@ -310,7 +274,7 @@ where the contributing terms are, from left to right, the Kasuya-LeCraw term or 
 <div id="fig-plotall" align="center">
   <img src="plotall.png" alt="Summary of contributions to magnon linewidth in a YIG sphere">
   <p>
-    <strong>Figure 8.</strong> Contributions to magnon linewidth in a YIG sphere ($f=10$ GHz). The Kasuya-LeCraw line is calculated with $\hbar\omega_{q2}/k_\text{B}=100$ K and normalized to 1 MHz at 300 K. The two-magnon line is calculated assuming temperature-dependent behavior from Ref. <a href="#Maier">[Maier]</a> and is normalized to 0.39 MHz at 10 mK [[Tabuchi2014](#Tabuchi2014)]. The two-level fluctuator (TLF) line is calculated with $P=0$ and is normalized to 0.63 MHz at 10 mK <a href="#Tabuchi2014">[Tabuchi2014]</a>. The slowly-relaxing line is calculated assuming $\delta E=20\,\text{cm}^{-1}$ and $2\pi f \tau_{\text{r},0}=3.3$, and is normalized to 3 MHz at 10 K <a href="#Tabuchi2014">[Tabuchi2014]</a>.
+    <strong>Figure 8.</strong> Contributions to magnon linewidth in a YIG sphere ($f=10$ GHz). The Kasuya-LeCraw line is calculated with $\hbar\omega_{q2}/k_\text{B}=100$ K and normalized to 1 MHz at 300 K. The two-magnon line is calculated assuming temperature-dependent behavior from Ref. <a href="#Maier-Flaig2017">[Maier-Flaig2017]</a> and is normalized to 0.39 MHz at 10 mK <a href="#Tabuchi2014">[Tabuchi2014]</a>. The two-level fluctuator (TLF) line is calculated with $P=0$ and is normalized to 0.63 MHz at 10 mK <a href="#Tabuchi2014">[Tabuchi2014]</a>. The slowly-relaxing line is calculated assuming $\delta E=20\,\text{cm}^{-1}$ and $2\pi f \tau_{\text{r},0}=3.3$, and is normalized to 3 MHz at 10 K <a href="#Tabuchi2014">[Tabuchi2014]</a>.
   </p>
 </div>
 
