@@ -12,17 +12,12 @@
 
   <ul class="blog-posts" style="list-style: none; padding: 0;">
     {{ range .Pages }}
-    <li style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
-      <span style="flex: 0 0 8rem; color: gray; font-family: monospace;">
-        {{ .Date.Format "2006-01-02" }}
-      </span>
-      <a href="{{ .RelPermalink }}" style="font-weight: bold; text-decoration: none;">
-        {{ .Title }}
-      </a>
+    <li class="post-item">
+      <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+      <a class="post-link" href="{{ .RelPermalink }}" style="font-weight: bold; text-decoration: none;">{{ .Title }}</a>
     </li>
-    {{ else }}
-    <li>No posts yet.</li>
     {{ end }}
   </ul>
+  
 </main>
 {{ end }}
