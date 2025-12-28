@@ -4,6 +4,6 @@ title: "Thoughts"
 
 # 🌱 Thoughts
 
-I hope to fill this page with ideas and learnings I had throughout the years.
+> This section serves as a digital garden for my ongoing learning. Unlike the **Archives**, these posts are reflections on the process rather than final technical results.
 
-(coming soon)
+---
