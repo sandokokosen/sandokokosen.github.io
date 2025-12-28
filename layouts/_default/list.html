@@ -16,8 +16,10 @@
       <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
       <a class="post-link" href="{{ .RelPermalink }}" style="font-weight: bold; text-decoration: none;">{{ .Title }}</a>
     </li>
+    {{ else }}
+    <li>No posts yet.</li>
     {{ end }}
   </ul>
-  
+
 </main>
 {{ end }}
