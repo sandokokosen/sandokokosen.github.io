@@ -109,7 +109,11 @@ outputs:
 # Disable tags
 disableKinds: ["taxonomy", "term"]
 
-
+# So that Hugo renders the content inside HTML commands
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 # # THE FOLLOWING IS FOR PAPERMOD
 # # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would

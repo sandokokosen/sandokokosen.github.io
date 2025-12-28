@@ -71,7 +71,7 @@ With increasing interests in recent years in the study of microwave magnons at m
 ## Overview of damping processes
 
 <div id="chLT_relproc" align="center">
-  <img src="relproc.png" alt="Known relaxation paths for magnons">
+  <img src="./relproc.png" alt="Known relaxation paths for magnons">
   <p>
     <strong>Figure 1.</strong> Known relaxation paths for uniformly precessing microwave magnons ($k=0$ mode) in <em>bulk YIG</em>, from millikelvin to room temperature. Diagram inspired by fig. 2.14 in Ref. <a href="#Sparks1964">[Sparks1964]</a>.
   </p>
