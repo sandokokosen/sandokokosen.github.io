@@ -249,13 +249,14 @@ At temperatures below 1 K (for excitations in the GHz-frequency regime), an addi
 
 Conceptually, the idea underpinning the TLF model is as follows: there are impurities within the material that can be modelled as an ensemble of two-level systems (fluctuators) with a broad frequency spectrum. At high temperature ($\hbar\omega_\mathrm{TLF}\ll k_\mathrm{B}T$), these TLFs are saturated by thermal phonons and, therefore, the material behaves as if they were not present. This is the reason why damping due to TLFs has not been observed at high temperature. At low temperature ($\hbar\omega_\mathrm{TLF}\gg k_\mathrm{B}T$), there are not enough thermal phonons to saturate the TLFs. If there is no external microwave drive or the drive power is low enough ($P\ll P_\mathrm{sat}$), most TLFs are in their ground state and ready to absorb any resonant excitation -- in our case: magnons -- within the system. If we assume that the TLFs preferentially relax to the lattice, this mechanism produces an additional damping channel. At these low temperatures, it is possible to saturate the TLFs using a strong external microwave drive ($P\gg P_\mathrm{sat}$); when fully saturated, they are unable to absorb more excitations from within the system and, as a result, the TLF damping becomes negligible. 
 
-The loss tangent arising from TLFs can be modelled as [[Martinis2005](#Martinis2005)]
+The loss tangent arising from TLFs can be modelled as [[Martinis2005](#Martinis2005)]:
 <a id="chLT_eqTLS_1"></a>
 $$
 \begin{align}
-\delta_\mathrm{TLF} = C_\mathrm{TLF} \frac{\tanh{\left(\hbar\omega/2k_\mathrm{B}T\right)}}{\sqrt{1+\left(P/P_\mathrm{sat}\right)}}  
+\delta_\mathrm{TLF} = C_\mathrm{TLF} \frac{\tanh{\left(\hbar\omega/2k_\mathrm{B}T\right)}}{\sqrt{1+\left(P/P_\mathrm{sat}\right)}},  
 \end{align}
 $$
+
 where $C_\mathrm{TLF}$ is a factor that depends on the density and the dipole strength of the TLF. As the loss tangent is the inverse of the quality factor, i.e. $1/Q=\Delta \omega/\omega \approx \delta_\mathrm{TLF}$ for $\delta_\mathrm{TLF}\ll 1$, then the linewidth contribution from the TLF is
 $$
 \begin{align}
