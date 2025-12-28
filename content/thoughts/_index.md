@@ -1,5 +1,6 @@
 ---
 title: "Thoughts"
+draft: false
 ---
 
 # 🌱 Thoughts
