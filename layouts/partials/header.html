@@ -1,4 +1,8 @@
 <header>
+    {{ if or .Params.math .Site.Params.math }}
+    {{ partial "math.html" . }}
+    {{ end }}
+
     <a class="title" href="/">
         <h1>{{ .Site.Title }}</h1>
     </a>
