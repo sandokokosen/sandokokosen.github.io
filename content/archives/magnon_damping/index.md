@@ -251,11 +251,13 @@ Conceptually, the idea underpinning the TLF model is as follows: there are impur
 
 The loss tangent arising from TLFs can be modelled as [[Martinis2005](#Martinis2005)]:
 <a id="chLT_eqTLS_1"></a>
+<p>
 $$
-\begin{align}
-\delta_\mathrm{TLF} = C_\mathrm{TLF} \frac{\tanh{\left(\hbar\omega/2k_\mathrm{B}T\right)}}{\sqrt{1+\left(P/P_\mathrm{sat}\right)}},  
-\end{align}
+\begin{aligned}
+\delta_\mathrm{TLF} = C_\mathrm{TLF} \frac{\tanh{\left(\hbar\omega/2k_\mathrm{B}T\right)}}{\sqrt{1+\left(P/P_\mathrm{sat}\right)}},
+\end{aligned}
 $$
+</p>
 
 where $C_\mathrm{TLF}$ is a factor that depends on the density and the dipole strength of the TLF. As the loss tangent is the inverse of the quality factor, i.e. $1/Q=\Delta \omega/\omega \approx \delta_\mathrm{TLF}$ for $\delta_\mathrm{TLF}\ll 1$, then the linewidth contribution from the TLF is
 $$
