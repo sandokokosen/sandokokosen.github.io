@@ -169,9 +169,9 @@ $$
 \tau_r = \tau_{r,0} \tanh{\frac{\delta E}{2k_\mathrm{B}T}} 
 \end{align}
 $$
-The parameter $\tau_{r,0}$ in [eq. (9)](#chLT_eq_a) also depends on $\delta E$ with the exact nature of its dependence being determined by the specific process involved [[Gurevich1996](#Gurevich1996)]. At higher temperatures, relaxation is governed either by the two-quasiparticle Orbach process or the Raman process, which have different temperature dependencies [[Clarke1965](#Clarke1965), [Clarke1965a](#Clarke1965a)].
+The parameter $\tau_{r,0}$ in [eq. (8)](#chLT_eq_a) also depends on $\delta E$ with the exact nature of its dependence being determined by the specific process involved [[Gurevich1996](#Gurevich1996)]. At higher temperatures, relaxation is governed either by the two-quasiparticle Orbach process or the Raman process, which have different temperature dependencies [[Clarke1965](#Clarke1965), [Clarke1965a](#Clarke1965a)].
 
-Note that $\Omega_1$ is the only frequency-dependent term in [eq. 6](#chLT_eq_b). It is maximum when $\omega\tau_\mathrm{r}\sim1$ (see [eq. 8](#chLT_eq_bb)), a condition that corresponds to maximum energy transfer to the lattice. At a given precessional frequency $\omega$, $\Omega_1$ is maximum only at a particular characteristic temperature $T_\mathrm{ch}$ as the relaxation time ($\tau_\mathrm{r}$) is temperature dependent. Also, [eq. (9)](#chLT_eq_a) implies that the relaxation time increases with decreasing temperature. Accordingly, the higher the precessional frequency, the higher the characteristic temperature $T_\mathrm{c}$ at which the local maxima of the linewidth also occurs, as shown in [fig. 5(a)](#fig-w2w).
+Note that $\Omega_1$ is the only frequency-dependent term in [eq. 6](#chLT_eq_b). It is maximum when $\omega\tau_\mathrm{r}\sim1$ (see [eq. 7](#chLT_eq_bb)), a condition that corresponds to maximum energy transfer to the lattice. At a given precessional frequency $\omega$, $\Omega_1$ is maximum only at a particular characteristic temperature $T_\mathrm{ch}$ as the relaxation time ($\tau_\mathrm{r}$) is temperature dependent. Also, [eq. (8)](#chLT_eq_a) implies that the relaxation time increases with decreasing temperature. Accordingly, the higher the precessional frequency, the higher the characteristic temperature $T_\mathrm{c}$ at which the local maxima of the linewidth also occurs, as shown in [fig. 5(a)](#fig-w2w).
 
 <div id="fig-w2w" align="center">
   <img src="w2w.png" alt="Temperature-dependent linewidth at different frequencies">
@@ -253,9 +253,9 @@ The loss tangent arising from TLFs can be modelled as [[Martinis2005](#Martinis2
 <a id="chLT_eqTLS_1"></a>
 <p>
 $$
-\begin{aligned}
+\begin{align}
 \delta_\mathrm{TLF} = C_\mathrm{TLF} \frac{\tanh{\left(\hbar\omega/2k_\mathrm{B}T\right)}}{\sqrt{1+\left(P/P_\mathrm{sat}\right)}},
-\end{aligned}
+\end{align}
 $$
 </p>
 
