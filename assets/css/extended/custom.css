@@ -15,3 +15,10 @@ iframe {
 .entry-cover img {
     border: 1px solid var(--border);
 }
+
+/* This hides the RSS link in the navigation menu and footer */
+nav a[href$="/index.xml"], 
+footer a[href$="/index.xml"],
+.rss-link {
+    display: none !important;
+}
