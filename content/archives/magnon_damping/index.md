@@ -59,7 +59,9 @@ Damping in pure YIG is known to have a linear frequency dependence at room tempe
 
 In the Kasuya-LeCraw theory, there are two processes through which the $k=0$ magnons can relax [[Kasuya1961](#Kasuya1961), [Sparks1964](#Sparks1964)]. Both of these are caused by the modulation of the local uniaxial anisotropy by a phonon [[Cherepanov1993](#Cherepanov1993)]. The first process involves the confluence of a $k=0$ magnon with an optical phonon to form a thermal magnon in the lowest branch of the magnon spectrum (referred to as the ferromagnon branch in Ref. [[Cherepanov1993](#Cherepanov1993)]). This mechanism reproduces the observed linear frequency and temperature dependences of the damping between ~150 K and 350 K; the predicted temperature dependence is shown to drop below linearity as the temperature is reduced below 150 K [[Sparks1964](#Sparks1964)]. The analytical derivation for the linewidth contribution from the first Kasuya-LeCraw process is described in Ref. [[Sparks1964](#Sparks1964)], it can be expressed as:
 $$
+\begin{align}
 \Delta H_\mathrm{KL} = \left(C_\mathrm{KL} F(T)\right)\omega,
+\end{align}
 $$
 where
 $$
@@ -250,11 +252,15 @@ Conceptually, the idea underpinning the TLF model is as follows: there are impur
 The loss tangent arising from TLFs can be modelled as [[Martinis2005](#Martinis2005)]
 <a id="chLT_eqTLS_1"></a>
 $$
+\begin{align}
 \delta_\mathrm{TLF} = C_\mathrm{TLF} \frac{\tanh{\left(\hbar\omega/2k_\mathrm{B}T\right)}}{\sqrt{1+\left(P/P_\mathrm{sat}\right)}}  
+\end{align}
 $$
 where $C_\mathrm{TLF}$ is a factor that depends on the density and the dipole strength of the TLF. As the loss tangent is the inverse of the quality factor, i.e. $1/Q=\Delta \omega/\omega \approx \delta_\mathrm{TLF}$ for $\delta_\mathrm{TLF}\ll 1$, then the linewidth contribution from the TLF is
 $$
+\begin{align}
 \Delta H_\mathrm{TLF} = \frac{\omega}{\gamma\mu_{\circ}} \delta_\mathrm{TLF} 
+\end{align}
 $$
 where $\gamma$ is the gyromagnetic ratio, and $\mu_{\circ}$ is the vacuum permeability. The power ratio within the square root of [eq. 15](#chLT_eqTLS_1) can be expressed as $\left(P/P_\mathrm{sat}\right)=\omega_\mathrm{TLF}^2\tau_1\tau_2$ where $\omega_\mathrm{TLF}$ is the Rabi frequency, $\tau_1$ and $\tau_2$ are respectively the longitudinal and transverse relaxation time constants of the TLFs. [Figure 7](#fig-TLS) shows the behaviour of $\Delta H_\mathrm{TLF}$ as a function of temperature ($T$) and power ($P$).
 
