@@ -22,3 +22,18 @@ footer a[href$="/index.xml"],
 .rss-link {
     display: none !important;
 }
+
+/* This overrides theme colors to force Light Mode always */
+:root, [data-theme="dark"], [data-theme="light"] {
+    --bg: #ffffff !important;
+    --fg: #111111 !important;    /* Deep dark gray/black for text */
+    --accent: #0044cc !important; /* Optional: Sets a standard blue for links */
+    background-color: #ffffff !important;
+    color: #111111 !important;
+}
+
+/* Ensure the body and main containers respect the white background */
+body {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
