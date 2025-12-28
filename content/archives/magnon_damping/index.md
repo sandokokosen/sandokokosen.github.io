@@ -293,11 +293,11 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 
 # References
 
-[<a id="Akhiezer1968"></a>**Akhiezer1968**] Akhiezer, A.I., Bar'yakhtar, V.G., and Peletminskii, S.V. Spin Waves. North-Holland, Amsterdam, 1968.
+[<a id="Akhiezer1968"></a>**Akhiezer1968**] Akhiezer, A.I., Bar'yakhtar, V.G., and Peletminskii, S.V. Spin Waves. North-Holland, Amsterdam, 1968. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
-[<a id="Anderson1972"></a>**Anderson1972**] Anderson, P.W., Halperin, B.I., and Varma, C.M. "Anomalous Low-Temperature Thermal Properties of Glasses and Spin Glasses." Philosophical Magazine, vol. 25, no. 1, 1972, pp. 1–9. doi:10.1080/14786437208229210.
+[<a id="Anderson1972"></a>**Anderson1972**] Anderson, P.W., Halperin, B.I., and Varma, C.M. "Anomalous Low-Temperature Thermal Properties of Glasses and Spin Glasses." Philosophical Magazine, vol. 25, no. 1, 1972, pp. 1–9. doi:10.1080/14786437208229210. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
-[<a id="Buffler1959"></a>**Buffler1959**] Buffler, C.R. "Ferromagnetic Resonance near the Upper Limit of the Spin Wave Manifold." Journal of Applied Physics, vol. 30, no. 4, 1959, pp. S172–S175. doi:10.1063/1.2185872.
+[<a id="Buffler1959"></a>**Buffler1959**] Buffler, C.R. "Ferromagnetic Resonance near the Upper Limit of the Spin Wave Manifold." Journal of Applied Physics, vol. 30, no. 4, 1959, pp. S172–S175. doi:10.1063/1.2185872. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Cherepanov1993"></a>**Cherepanov1993**] Cherepanov, V., Kolokolov, I., and L'vov, V. "The Saga of YIG: Spectra, Thermodynamics, Interaction and Relaxation of Magnons in a Complex Magnet." Physics Reports, vol. 229, no. 3, 1993, pp. 81–144. doi:10.1016/0370-1573(93)90107-O.
 
