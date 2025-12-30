@@ -45,6 +45,7 @@ title = "Notes by Sandoko"
 #     { kickstarter = "https://www.kickstarter.com/profile/username" },
 #     { lastfm = "https://lastfm.com/user/username" },
 #     { linkedin = "https://www.linkedin.com/in/sandokokosen/" },
+#     { google-scholar = "https://scholar.google.co.uk/citations?user=a_wMcfwAAAAJ"}
 #     { link = "https://scholar.google.co.uk/citations?user=a_wMcfwAAAAJ" },
 #     { mastodon = "https://mastodon.instance/@username" },
 #     { matrix = "https://matrix.to/#/URI" },
