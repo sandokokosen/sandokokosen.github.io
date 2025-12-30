@@ -7,7 +7,7 @@
 
 colorScheme = "blowfish"
 defaultAppearance = "light" # valid options: light or dark
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 
 enableA11y = false
 enableSearch = true
@@ -179,3 +179,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
 
 [advertisement]
   # adsense = ""
+
+[math]
+  enable = true
+  katex = true
