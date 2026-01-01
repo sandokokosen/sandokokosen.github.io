@@ -63,11 +63,20 @@
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
+[[footer]]
+  name = "Thoughts"
+  pageRef = "/thoughts/"
+  weight = 10
+
+[[footer]]
+  name = "Technicals"
+  pageRef = "/Technicals/"
+  weight = 20
 
  [[footer]]
    name = "Tags"
    pageRef = "tags"
-   weight = 10
+   weight = 30
 
 # [[footer]]
 #   name = "Categories"
@@ -77,4 +86,4 @@
 [[footer]]
   name = "Profile"
   url = "https://www.sandokokosen.com/"
-  weight = 30
+  weight = 40
