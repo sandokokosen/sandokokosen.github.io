@@ -12,7 +12,7 @@ showHeadingAnchors: true
 {{< katex >}}
 
 # Preface
-For my PhD, I worked on the foundation of what we would like to call as the quantum magnonics in thin film architecture. In a previous work, we learned that the cryogenic magnonic damping in such a system is higher than expected. It prompted me to eventually undertake the task of understanding the potential cause of such issue at milliKelvin temperature. It certainly wasn't an easy task to design the experiments, made sense of the results, and put it in the broader context of the existing knowledge. To this day, I am very happy for how it turned out [[Kosen2019](#Kosen2019)], and the fact that it remains regularly cited after all these years goes to show that this result is useful to the community (in a paradoxical way, I hope that this trend does not continue for too long since it signifies that no significant progress has been made, and the field stays as it was before I left).
+For my PhD, I worked on the foundation of what we would like to call as the quantum magnonics in thin film architecture. In previous works, we learned that the cryogenic magnonic damping in such a system is higher than expected [[VanLoo2018](#VanLoo2018), [Mihalceanu2018](#Mihalceanu2018), [Kosen2018](#Kosen2018)]. It prompted me to eventually undertake the task of understanding the potential cause of such issue at milliKelvin temperature. It certainly wasn't an easy task to design the experiments, made sense of the results, and put it in the broader context of the existing knowledge. To this day, I am very happy for how it turned out [[Kosen2019](#Kosen2019)], and the fact that it remains regularly cited after all these years goes to show that this result is useful to the community (in a paradoxical way, I hope that this trend does not continue for too long since it signifies that no significant progress has been made, and the field stays as it was before I left).
 
 The field seems to have evolved considerably since then, and while I am sure there are new advances, unfortunately I don't keep track of much of it for quite some years. For those interested in the very latest breakthroughs, I recommend exploring recent updates via Google Scholar.
 
@@ -20,7 +20,7 @@ Much of the difficulty in understanding the problem at hand was navigating the l
 
 Coming into the field in the 21st century, I found it difficult to locate a concise summary of known damping mechanisms. The essential knowledge was scattered across disparate papers and out-of-print books that were often missing from university archives. I wrote a review chapter in my PhD thesis to synthesize the information necessary to preface my results on microwave magnon damping at milliKelvin temperatures. I believe this synthesis remains a unique contribution to the field. I am reproducing those sections here in the hope that they provide a helpful roadmap for newcomers.
 
-The following sections are adapted from Chapter 6 and 7 of my thesis. If you find the first part, i.e., the review, useful, please consider citing the original [thesis](https://ora.ox.ac.uk/objects/uuid:5ee2230d-d015-4bc6-905d-5b4d403610d9). 
+The following sections are adapted from Chapter 6 and 7 of my thesis. If you find the first part, i.e., the review, useful, please consider citing the original [[Kosen2019a](#Kosen2019a)]. 
 
 
 # Damping Processes in Bulk YIG
@@ -345,6 +345,8 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 [<a id="Kosen2018"></a>**Kosen2018**] Kosen, S., Morris, R.G.E., van Loo, A.F., and Karenowska, A.D. "Measurement of a Magnonic Crystal at Millikelvin Temperatures." Applied Physics Letters, vol. 112, no. 1, 2018, p. 012402. doi:10.1063/1.5011767. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Kosen2019"></a>**Kosen2019**] Kosen, S., van Loo, A.F., Bozhko, D.A., Mihalceanu, L., and Karenowska, A.D. "Microwave Magnon Damping in YIG Films at Millikelvin Temperatures." Unpublished, 2019. arXiv:1903.02527. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Kosen2019a"></a>**Kosen2019a**] Kosen, S. "Microwave Magnonics at Millikelvin Temperatures". PhD thesis, University of Oxford, 2019. doi: <a href="https://doi.org/10.5287/ORA-GOJQD8KQD">10.5287/ORA-GOJQD8KQD</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="LeCraw1958"></a>**LeCraw1958**] LeCraw, R.C., Spencer, E.G., and Porter, C.S. "Ferromagnetic Resonance Line Width in Yttrium Iron Garnet Single Crystals." Physical Review, vol. 110, no. 6, 1958, pp. 1311–1313. doi:10.1103/PhysRev.110.1311. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
