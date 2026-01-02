@@ -344,7 +344,7 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 
 [<a id="Kosen2018"></a>**Kosen2018**] Kosen, S., Morris, R.G.E., van Loo, A.F., and Karenowska, A.D. "Measurement of a Magnonic Crystal at Millikelvin Temperatures." Applied Physics Letters, vol. 112, no. 1, 2018, p. 012402. doi:10.1063/1.5011767. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
-[<a id="Kosen2019"></a>**Kosen2019**] Kosen, S., van Loo, A.F., Bozhko, D.A., Mihalceanu, L., and Karenowska, A.D. "Microwave Magnon Damping in YIG Films at Millikelvin Temperatures." Unpublished, 2019. arXiv:1903.02527. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+[<a id="Kosen2019"></a>**Kosen2019**] Kosen, S., van Loo, A.F., Bozhko, D.A., Mihalceanu, L., and Karenowska, A.D. "Microwave Magnon Damping in YIG Films at Millikelvin Temperatures." APL Materials 7, no. 10 (2019): 101120. doi: <a href="https://doi.org/10.1063/1.5115266">10.1063/1.5115266</a> <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Kosen2019a"></a>**Kosen2019a**] Kosen, S. "Microwave Magnonics at Millikelvin Temperatures". PhD thesis, University of Oxford, 2019. doi: <a href="https://doi.org/10.5287/ORA-GOJQD8KQD">10.5287/ORA-GOJQD8KQD</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
