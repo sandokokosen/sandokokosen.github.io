@@ -6,12 +6,8 @@ date: "2025-12-24"
 # summary: "Review of the various damping mechanisms of microwave magnons in bulk Yttrium Iron Garnet"
 tags: ["magnons"]
 draft: false
-# ShowToc: true
-# TocOpen: true
 showTableOfContents: true
 showHeadingAnchors: true
-# sharingLinks: true
-# math: true
 ---
 {{< katex >}}
 
