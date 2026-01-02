@@ -255,12 +255,13 @@ $$
 $$
 
 where \(C_\mathrm{TLF}\) is a factor that depends on the density and the dipole strength of the TLF. As the loss tangent is the inverse of the quality factor, i.e. \(1/Q=\Delta \omega/\omega \approx \delta_\mathrm{TLF}\) for \(\delta_\mathrm{TLF}\ll 1\), then the linewidth contribution from the TLF is
+<a id="chLT_eqTLS"></a>
 $$
 \begin{align}
-\Delta H_\mathrm{TLF} = \frac{\omega}{\gamma\mu_{\circ}} \delta_\mathrm{TLF} 
+\Delta H_\mathrm{TLF} = \frac{\omega}{\gamma\mu_0} \delta_\mathrm{TLF} 
 \end{align}
 $$
-where \(\gamma\) is the gyromagnetic ratio, and \(\mu_{\circ}\) is the vacuum permeability. The power ratio within the square root of [eq. 15](#chLT_eqTLS_1) can be expressed as \(\left(P/P_\mathrm{sat}\right)=\omega_\mathrm{TLF}^2\tau_1\tau_2\) where \(\omega_\mathrm{TLF}\) is the Rabi frequency, \(\tau_1$ and \(\tau_2\) are respectively the longitudinal and transverse relaxation time constants of the TLFs. [Figure 7](#fig-TLS) shows the behaviour of \(\Delta H_\mathrm{TLF}\) as a function of temperature (\(T\)) and power (\(P\)).
+where \(\gamma\) is the gyromagnetic ratio, and \(\mu_0\) is the vacuum permeability. The power ratio within the square root of [eq. 15](#chLT_eqTLS_1) can be expressed as \(\left(P/P_\mathrm{sat}\right)=\omega_\mathrm{TLF}^2\tau_1\tau_2\) where \(\omega_\mathrm{TLF}\) is the Rabi frequency, \(\tau_1\) and \(\tau_2\) are respectively the longitudinal and transverse relaxation time constants of the TLFs. [Figure 7](#fig-TLS) shows the behaviour of \(\Delta H_\mathrm{TLF}\) as a function of temperature (\(T\)) and power (\(P\)).
 
 It is important to note that the TLF mechanism is just a phenomenological model. It does not propose an origin for this behaviour in the system. In other physical systems such as the vitreous silica, the TLFs are thought to consist of tunnelling states between neighbouring defect sites [[Phillips1987](#Phillips1987)]. Each state is modelled as a particle tunnelling across a double well potential minimum. The origin of TLFs in bulk YIG is still unknown.
 
@@ -284,13 +285,251 @@ where the contributing terms are, from left to right, the Kasuya-LeCraw term or 
 
 As we shall discover in the next chapter, in the case of YIG **films**, there is an additional damping channel that becomes important at low temperature.
 
+# Damping Processes in Thin-Film YIG
 
+This chapter reports on measurements of magnon damping in YIG films at both room and low temperatures (20 mK to 9 K). First, we shall describe various practical aspects of our sample and measurement configuration. Following on from this, we shall discuss the characteristics of our samples at room temperature, and compare the measurement results we obtain at room and low temperatures. In particular, we shall focus on the low-temperature influence of the substrate and two-level fluctuators (TLFs). This work has been published in Ref. [[Kosen2019](#Kosen2019)].
+
+## Introduction
+To couple quantum circuits to magnons in YIG, it is essential that the dampings of both the quantum circuit and the magnon systems is low in order to preserve quantum coherence as long as possible. In particular, for magnon-based quantum devices to be truly feasible, YIG itself has to be shown to exhibit low damping at the temperatures needed for the operation of a quantum circuit. To date, only *bulk* YIG has been shown to retain its low magnon damping behaviour at mK temperatures [[Tabuchi2014](#Tabuchi2014), [Zhang2015](#Zhang2015), [Morris2017](#Morris2017), [Boventer2018](#Boventer2018), [Pfirrmann2019](#Pfirrmann2019)]. 
+
+The story is more complicated in the case of YIG *films*. As described in Chapter 3 of Ref. [[Kosen2019a](#Kosen2019a)], YIG films are typically grown on a gadolinium gallium garnet (GGG) substrate. GGG is a geometrically frustrated magnetic system that is known to be paramagnetic below 70 K [[Danilov1989](#Danilov1989), [Petrenko1999](#Petrenko1999), [Danilov2002](#Danilov2002)]. Recent measurements at 20 K [[Mihalceanu2018](#Mihalceanu2018)] showed that GGG increases the magnon damping in YIG films, but its behaviour at mK temperatures is yet to be completely understood [[Danilov1989](#Danilov1989), [Petrenko1999](#Petrenko1999), [Danilov2002](#Danilov2002)]. Having measured YIG films on GGG at 20 mK and found the damping to be significantly increased above the room-temperature value, we set out to address the question of whether this behaviour could be attributable to the substrate.	
+  
+## Measurement technique
+
+### Introduction
+Three techniques are frequently used to characterise magnon damping or linewidth in YIG: parallel pumping, fixed-frequency FMR, and broadband FMR techniques [[Serga2010](#Serga2010), [Maksymov2015](#Maksymov2015)].
+
+The parallel-pumping technique relies on the phenomenon of parametric instability: application of a sufficiently strong microwave pump (angular frequency \(2\omega\)) parallel to the bias field will lead to the creation of counterpropagating magnons in the YIG (wavevectors \(k\), \(-k\), and angular frequency \(\omega\)) [[Schlomann1960](#Schlomann1960), [Sparks1964](#Sparks1964), [Gurevich1996](#Gurevich1996), [Serga2010](#Serga2010)]. The threshold pump field needed to initiate the instability is directly related to the linewidth of the excited magnons [[Schlomann1960](#Schlomann1960)]. Due to the high power required, a resonator is generally employed to amplify the energy pumped into the system. As such, the accessible frequency range of this technique is limited by that the bandwidth of the resonator. Accordingly, this technique is best suited for applications in which it is desirable to characterise the linewidth of magnons with specific \(k\)-values as shown in Refs. [[Kasuya1961](#Kasuya1961), [Gurevich1975](#Gurevich1975), [Mihalceanu2018](#Mihalceanu2018)].
+
+In the fixed-frequency FMR technique, a cavity which can support a highly uniform microwave excitation field is typically employed to measure the linewidth of uniformly-precessing magnons (\(k=0\)) [[Tabuchi2014](#Tabuchi2014), [Zhang2014](#Zhang2014), [Zhang2016](#Zhang2016)]. A microwave tone excites the cavity containing the YIG at resonance while the magnetic bias field is varied. If the frequency of a particular magnon mode coincides with the microwave tone inside the cavity, the sample starts to absorb energy, changing the amplitude of signal transmitted through it (\(S_{21}\)). The width of the absorption curve as a function of the bias field strength provides a measure of the linewidth of the excited magnon mode. This technique can typically measure only over a narrow frequency range determined by the quality factor of the cavity. Therefore, like the parallel-pumping technique, it is not well-suited to investigations in which the frequency-dependent behaviour of the linewidth are of interest.
+    
+The broadband FMR technique commonly employs a stripline as the microwave signal conduit. In contrast to the two techniques already discussed, it allows the linewidth to be measured across a wide range of frequencies (up to \(\sim 40\) GHz) -- all with a single stripline [[Maksymov2015](#Maksymov2015), [Jermain2017](#Jermain2017), [Maier-Flaig2017](#Maier-Flaig2017), [Klingler2017a](#Klingler2017a)]. The methodology is similar to the fixed-frequency FMR technique, except that measurements can also be made in which the bias field is fixed and the frequency of the microwave input signal is swept. This capability is invaluable in the study of frequency-dependent relaxation processes. There are, however, a number of drawbacks --- notably the need to account for the unwanted excitations of propagating magnons (Section [Choosing microstrip width and sample size](#choosing-microstrip-width-and-sample-size)) and radiation damping (Section [Radiation damping](#radiation-damping)) [[Stancil2009a](#Stancil2009a), [Schoen2015](#Schoen2015)]. Nonetheless, in the context of our investigations, the ability to measure over a wide range of frequencies was considered to trump these inconveniences and we chose to use this technique in our experiments.
+
+### Experimental configuration
+
+<div id="fig-chLW_microstrip" align="center"> 
+<img src="microstrip.png" alt="Microstrip-based technique used for the measurement of magnon linewidths."> <p> <strong>Figure 9.</strong> Microstrip-based technique used for the measurement of magnon linewidths. </p> </div>
+
+The stripline employed in this work is a microstrip line above which the sample is positioned as shown in [fig. 9](#fig-chLW_microstrip). It is magnetised by an external out-of-plane magnetic field (\(B\)). This field configuration minimizes the linewidth contribution from two-magnon processes (Section [Two-magnon process](#two-magnon-process)) brought about by the film's surface roughness [[Landeros2008](#Landeros2008), [Hurben1998](#Hurben1998), [McMichael2004](#McMichael2004)]. Alternating currents transmitted through the microstrip create a microwave field which is then used to probe magnon resonances within the sample as shown in [fig. 9](#fig-chLW_microstrip). The absorption signal is fitted with a Lorentzian function and the magnon linewidth (\(\Delta f\)) is the full width at half maximum of the Lorentzian fit.
+
+For low-temperature experiments, the sample is mounted at the mixing chamber stage of a dilution refrigerator. Our measurement frequency range is limited from 3.5 GHz to 7 GHz. Here, the low-frequency limit is imposed by the limited bandwidth of the cryogenic circulators. The high-frequency limit is imposed by the maximum magnetic field that can be produced by our setup. 
+
+### Choosing microstrip width and sample size
+
+<div id="fig-chLW_microstrip1" align="center">
+<img src="microstrip1.png" alt="Radiation resistance per unit length of the lowest order forward volume mode"><p><strong>Figure 10.</strong> The radiation resistance per unit length of the lowest order forward volume mode <a href="#Stancil2009a">[Stancil2009a]</a>. The calculation assumes \(M_\mathrm{s}=139\) kA/m, \(B=300\) mT, a film thickness of \(D=11\) \(\mu\)m, and that the film is positioned directly on top of the antenna. The two curves correspond to two different microstrip widths (\(w_1=0.9\) mm, \(w_2=1.7\) mm). The current distribution is assumed to be constant across the width of the microstrip. Wavevectors corresponding to the first zero of each curve (denoted by \(k_\mathrm{m}\)) are typically the maximum \(k\) value that can be excited by the microstrip.</p></div>
+
+In order to limit the maximum \(k\)-values, \(k_\mathrm{m}\), of unwanted propagating magnons that can be excited, a wide microstrip is required. [Figure 10](#fig-chLW_microstrip1) shows the radiation resistance per unit length calculated for two different microstrip widths (\(w\)). The radiation resistance is proportional to the amount of power that is coupled into the magnon system. The calculations plotted in [fig. 10](#fig-chLW_microstrip1) shows that the cutoff value \(k_\mathrm{m}\) is indeed higher for a narrower microstrip. Mathematically, the theoretical radiation resistance plotted in [fig. 10](#fig-chLW_microstrip1) is proportional to the Fourier transform of the current distribution within the microstrip [Stancil2009a](#Stancil2009a). For a homogeneous current distribution across the width, the Fourier transform is proportional to \(\mathrm{sinc}{(kw/2)}\) with its first zero giving the corresponding cutoff wavevector \(k_\mathrm{m}w/2=\pi\). Care needs to be taken not to make the microstrip too wide as this will have the effect of making the current density within the antenna so small as to deleteriously weaken the sensitivity of the measurement setup.
+
+Beyond working with a relatively wide antenna, excitations of a continuum of propagating magnons can be further suppressed by forcing the creation of standing wave modes within the samples [[Guslienko2002](#Guslienko2002), [Guslienko2003](#Guslienko2003)]. This is achieved by reducing its lateral size such that there can be multiple wave reflections from its boundaries. By analogy with a photonic cavity or resonator, only certain multiples of wavelength can create standing waves. The smaller the lateral size of the sample, the smaller the wavelength (higher the \(k\)-value) associated with the first order standing mode. Ideally, therefore, we would like to position the first-order standing wave mode as far as possible from the \(k=0\) mode by making the sample as small as possible. However, miniaturisation also decreases the absorption strength of the sample (\(A\) in [fig. 9](#fig-chLW_microstrip)) since the smaller the volume, the smaller the number of spins available to interact with the input microwave signal.
+
+<div id="fig-chLW_filmsize" align="center">
+<img src="filmsize.png" alt="Frequency of the first standing wave mode as a function of sample lateral size"><p><strong>Figure 11.</strong> Frequency of the first standing wave mode, i.e. \(f(k=\pi/x)\), relative to the \(k=0\) mode, i.e. \(f(k=0)\), as a function of the maximum lateral size of the sample \(x\), calculated based on the dispersion relation of forward volume magnons. Both curves are calculated for an FMR frequency of 4 GHz.</p></div>
+    
+Given the previous discussion concerning the geometry of the sample, it is natural to ask what would be the biggest sample size that might be used in order to achieve the highest absorption strength while still ensuring that the higher-order standing wave modes are not so close in frequency to the \(k=0\) mode. This ensures that they are not broadened by the presence of overlapping standing wave modes that are too near to the \(k=0\) mode --- a particularly important consideration given that we anticipate that the linewidth of the \(k=0\) mode will increase at low temperatures. If we estimate that the upper bound on the magnon linewidth at 20 mK is not more than \(\sim 15\) MHz, then the nearest higher-order mode should be spaced at least 15 MHz away from the \(k=0\) mode. To estimate the position of lowest-frequency standing-wave mode, we assume it corresponds to magnons having a wavelength twice the maximum lateral size of the sample \(x\), i.e. \(\lambda=2x\) and \(k_1=2\pi/\lambda=\pi/x\). The corresponding wavevector \(k_1\) is converted into a frequency value via the FVMSW dispersion relation (eq. 2.8 of Ref. [[Kosen2019a](#Kosen2019a)]). 
+
+The frequency difference between the \(k=0\) mode (uniform precession) and the \(k_1\) mode as a function of the maximum dimension of the sample \(x\) is shown in [fig. 11](#fig-chLW_filmsize) for values of \(M_\mathrm{s}\) at 300 K and at 20 mK. Based on our approximations, for experiments at 20 mK, the result shows that \(x=4\) mm is the maximum sample size that should be used. Choosing from a selection of YIG films available to us, we opted to use a 3 mm\(\times\)2 mm-sized sample. 
+
+### Radiation damping
+Radiation damping increases the measured damping of the sample and must therefore be carefully considered [[Kostylev2016a](#Kostylev2016a), [Schoen2015](#Schoen2015)]. As mentioned previously, the alternating current within the microstrip creates a microwave field that excites magnons within the sample. Radiation damping comes about as back-action of the magnons into the microstrip --- the magnetic field of magnons excited within the sample induces alternating currents within the microstrip, and the ohmic dissipation of this induced current leads to an additional spurious contribution to the magnon damping.
+
+The linewidth contribution due to radiation damping is modelled in Ref. [[Schoen2015](#Schoen2015)] in terms of an equivalent Gilbert damping parameter \(\alpha_\mathrm{rad}\), i.e.
+<a id="chLWeqrad"></a>
+$$
+\begin{align}
+\alpha_\mathrm{rad} = \eta\frac{\gamma\mu_0}{Z_0}M_\mathrm{s} \tilde{L},
+\end{align}
+$$
+where \(\eta\) is a factor related to the amplitude profile of the magnetisation within the sample, \(Z_0\) is the characteristic impedance of the microstrip (usually fixed at 50 \(\Omega\)), \(\gamma\) is the gyromagnetic ratio, \(\mu_0\) is the vacuum permeability, \(M_\mathrm{s}\) is the saturation magnetisation, and \(\tilde{L}\) is the normalised mode inductance of the magnetisation mode within the sample. The normalised mode inductance is a coupling term that depends on the geometry of the system and the overlap integral (i.e. mode matching) between the microwave field of the microstrip and the amplitude profile of the magnetisation within the sample.
+
+Radiation damping can be minimized by decreasing the coupling between the sample and the microstrip. In terms of [eq. 18](#chLWeqrad), this corresponds to reducing \(\tilde{L}\). This can be achieved, for instance, by increasing the separation (\(d\) in [fig. 9](#fig-chLW_microstrip)) between the sample and the microstrip. However, this comes at the expense of decreasing the absorption strength (\(A\)) in the sample and, accordingly, the effective sensitivity of the measurement setup. In light of these factors, there is a tradeoff to be made between being able to measure a linewidth that is very close to the intrinsic linewidth of the sample and being able to obtain an adequate signal-to-noise ratio (SNR). The latter is achieved by positioning the sample nearer to the stripline (negligible separation \(d\)), thus increasing its absorption strength but at the expense of measuring linewidth values that contain a substantial radiation damping contribution.
+
+It should be noted that the sole temperature dependency of \(\alpha_\mathrm{rad}\) originates from the saturation magnetisation \(M_\mathrm{s}\), which is expected to increase with decreasing temperature [[Solt1962](#Solt1962), [Maier-Flaig2017](#Maier-Flaig2017)]. If the measurement configuration is maintained between room temperature and 20 mK, i.e. no changes in the experimental geometry, \(\alpha_\mathrm{rad}\) is expected to be enhanced by a factor of approximately \(M_\mathrm{s}(20 \mathrm{mK})/M_\mathrm{s}(300 \mathrm{K})\). 
+
+
+## Experimental results
+We now examine the results of experiments designed to probe the magnon damping in YIG films both at room temperature (300 K) and at low temperature (20 mK to 9 K). By comparing data obtained from different samples at different temperatures, we are able to move closer to an understanding of the impact of the GGG substrate on the low-temperature linewidth and uncover an additional damping mechanism that only becomes dominant at below 1 K.
+
+Our room-temperature experiments are conducted by varying the input microwave frequency \(f\) under constant bias field \(B\). Our low-temperature data are obtained at fixed frequency by varying the bias field, As a consequence of the lower SNR at low temperature (on account of the input being highly attenuated), significant signal averaging is needed. Each field sweep takes about 10 s. The measured absorption signal is then fitted with a Lorentzian function to extract the linewidth. This process is repeated 30 to 40 times and the calculated linewidths are averaged. The error is quantified in terms of the standard deviation of the spread of the averaged values. The linewidths can be expressed either in units of magnetic field (the measurement parameter) or converted to units of frequency via the relation \(\Delta f =\gamma \Delta B/2\pi\). 
+
+### Room-temperature characterisation
+We chose to perform experiments on two epitaxial YIG films: one of \(11\) \(\mu\)m-thickness grown on a GGG substrate and a second of \(30\) \(\mu\)m-thickness without a substrate. In what follows, these will be referred to as the YIG/GGG and substrate-free YIG. The substrate-free YIG was obtained by polishing away the GGG layer from a YIG/GGG sample with \(53\) \(\mu\)m-thick YIG layer [[Mihalceanu2018](#Mihalceanu2018)]. 
+
+<div id="fig-chLW_res" align="center">
+<img src="res.png" alt="Absorption spectrum of a YIG/GGG film and a substrate-free YIG film"><p><strong>Figure 12.</strong> Absorption spectrum of a YIG/GGG film <strong>(panel (a))</strong> and a substrate-free YIG film <strong>(panel (b))</strong> measured at room temperature. Raw data have been compensated to take into account the frequency-dependent properties of the measurement setup by subtracting the measured transmission characteristics measured at zero field. YIG/GGG data is taken with the sample placed directly on top of the microstrip. Substrate-free YIG data is taken with the sample spaced by \(\approx500\) \(\mu\)m from the microstrip.</p></div>
+
+The YIG/GGG sample has a lateral size of \(\sim 3\) mm\(\times2\) mm (see Section [Choosing microstrip width and sample size](#choosing-microstrip-width-and-sample-size)) and is used in conjunction with a \(1.7\) mm-wide microstrip with a characteristic impedance of 50 \(\Omega\). The long axis of the sample is oriented along the long axis of the stripline. [Figure 12(a)](#fig-chLW_res) shows the observed magnon resonances for the film at room temperature. The data shows a strong absorption dip at \(\approx 4.992\) GHz, thought to be the uniform precession mode of the sample (\(k=0\)), and a series of weaker dips at higher frequencies. This is to be expected since the uniform precession mode of forward volume magnons (\(k=0\)) has a lower frequency compared to propagating modes (\(k\ne0\)). In addition, the nearest secondary dip is \(\sim\)16 MHz from frequency of the uniform precession mode, roughly as predicted according to [fig. 11](#fig-chLW_filmsize) (red line).
+
+To examine the linewidths (\(\Delta f\)) of the \(k=0\) mode, we performed a linear fit of the data to the relation \(\Delta f = 2\alpha f_0 + \Delta f_0\), where \(f_0\) is the resonance frequency. This fit gives the characteristic Gilbert damping constant \(\alpha\) (unitless) and the inhomogeneous broadening contribution \(\Delta f_0\). Typically, the Gilbert damping constant quantifies the amount of internal magnon damping within the sample itself, which we denote as \(\alpha_\mathrm{mag}\). In our experiments, the measured damping constant also includes the radiation damping contribution (\(\alpha_\mathrm{rad}\), see Section [Radiation damping](#radiation-damping)), i.e. \(\alpha = \alpha_\mathrm{mag}+\alpha_\mathrm{rad}\). The inhomogeneous contribution \(\Delta f_0\) represents the frequency-independent part of the linewidth. This typically originates from the inhomogeneity of the sample, the spatial inhomogeneity of the field, and broadening due to the process of averaging over multiple measurements.
+
+<div id="fig-chLW_rad" align="center">
+<img src="rad.png" alt="Measured damping constant and inhomogeneous contribution vs separation distance">
+<p>
+<strong>Figure 13.</strong> The measured damping constant (\(\alpha\)) and inhomogeneous contribution term (\(\Delta f_0\)) as a function of the separation (\(d\)) between the YIG/GGG sample and the microstrip. The error bar reflects the fitting uncertainty for each data point.
+</p>
+</div>
+
+[Figure 13](#fig-chLW_rad) shows the evolution of both \(\alpha\) and \(\Delta f_0\) as the spacing \(d\) between the YIG/GGG sample and the microstrip is increased. The spacer employed comprises of either a few layers of Kapton tape (1 layer \(\approx 70\) \(\mu\)m), a piece of single crystal sapphire (thickness \(\sim 540\) \(\mu\)m), or a combination of these. As expected, the measured damping constant \(\alpha\) decreases as \(d\) is increased, in agreement with the model presented previously ([eq. 18](#chLWeqrad)). The inhomogeneous contribution term \(\Delta f_0\), is not in general affected by the change in the spacing between the sample and the microstrip. In anticipation of increased linewidth at low temperature, a spacing of \(d=70\) \(\mu\)m  was used in measurements of the YIG/GGG film. Such a spacing leads to a substantial radiation damping contribution in the measured magnon linewidth, but can be expected to assure good signal-to-noise ratio even if the sample becomes much more lossy.
+
+The substrate-free YIG film, which has a lateral size of \(\sim1\) mm\(\times1\) mm (the largest sample available), is measured using a \(0.9\) mm-wide 50 \(\Omega\) microstrip. In the case of this sample, the antennae were spaced much further from the surface (\(d=540\) \(\mu\)m), leading to smaller radiation damping contribution. [Figure 12](#fig-chLW_res)(b) shows the observed magnon resonance for the substrate-free YIG film at room temperature. Only one absorption dip is observed in this case --- the \(k=0\) mode. The absorption strength is smaller than in case of YIG/GGG sample, owing to a larger value of \(d\) and a smaller sample volume.
+
+### Role of GGG at 20 mK
+[Figure 14](#fig-chLW_roomT_20mK) compares the magnon linewidth \(\Delta f\) of each sample at 300 K (room temperature) and at 20 mK as a function of resonance frequency \(f_0\). Table \ref{table1} provides a summary of linear fits to these data.
+
+<div id="fig-chLW_roomT_20mK" align="center">
+<img src="roomT_20mK.png" alt="Comparison of magnon linewidths at 300 K and 20 mK for YIG films">
+<p>
+<strong>Figure 14.</strong> Magnon linewidths \(\Delta f\) versus its resonance frequency \(f_0\) for a YIG/GGG film and a substrate-free YIG film. The datasets at room temperature (300 K, \(\bullet\)) are obtained with an input power of -25 dBm. The datasets at 20 mK are obtained for two input powers \(P_\mathrm{b}=-65\) dBm, and \(P_\mathrm{c}=-100\) dBm. Dashed lines are linear fits and the fit results are summarised in <a href="#table1">Table 1</a>. Note the different scaling in the vertical axis of the plots.
+</p>
+</div>
+
+<div id="table1" align="center">
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th><strong>YIG/GGG</strong></th>
+        <th><strong>Substrate-free YIG</strong></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Size</strong></td>
+        <td>2 mm \(\times\) 3 mm \(\times\) 11 \(\mu\)m</td>
+        <td>\(\sim\)1 mm \(\times\) 1 mm \(\times\) 30 \(\mu\)m</td>
+      </tr>
+      <tr>
+        <td><strong>\(w/d\)</strong></td>
+        <td>1.7 mm / 70 \(\mu\)m</td>
+        <td>0.9 mm / 540 \(\mu\)m</td>
+      </tr>
+      <tr>
+        <td><strong>300 K</strong></td>
+        <td>\(\alpha_\mathrm{1a}=(22\pm 4)\times 10^{-5}\) <br> \(\Delta f_{0,\mathrm{1a}}=(0.7\pm0.4)\) MHz</td>
+        <td>\(\alpha_\mathrm{2a}=(8.9\pm 0.5)\times 10^{-5}\) <br> \(\Delta f_{0,\mathrm{2a}} = (0.9\pm0.1)\) MHz</td>
+      </tr>
+      <tr>
+        <td><strong>20 mK</strong> <br> \(P_\mathrm{b}\) = -65 dBm</td>
+        <td>\(\alpha_\mathrm{1b}= (74\pm 5 ) \times 10^{-5}\) <br> \(\Delta f_{0,\mathrm{1b}}=(1.7\pm0.6)\) MHz</td>
+        <td>\(\alpha_\mathrm{2b} = (2.3 \pm 0.7) \times 10^{-5}\) <br> \(\Delta f_{0,\mathrm{2b}}=(1.1\pm0.1)\) MHz</td>
+      </tr>
+      <tr>
+        <td><strong>20 mK</strong> <br> \(P_\mathrm{c}\) = -100 dBm</td>
+        <td>\(\alpha_\mathrm{1c} = (85\pm6) \times 10^{-5}\) <br> \(\Delta f_{0,\mathrm{1c}}=(2.6\pm0.6)\) MHz</td>
+        <td>\(\alpha_\mathrm{2c} = (9.3\pm1.0)\times 10^{-5}\) <br> \(\Delta f_{0,\mathrm{2c}}=(2.0\pm0.1)\) MHz</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <strong>Table 1.</strong> Comparing results at 300 K and at 20 mK.
+  </p>
+</div>
+
+We first compare the results at 300 K and at 20 mK obtained with high input power (\(P_\mathrm{b}=-65\) dBm). At 20 mK, the measured linewidth of the uniformly-precessing (\(k=0\)) mode in substrate-free YIG decreases to approximately \(1.4\) MHz, lower than its room-temperature value across the measurement frequency range (3.5 GHz-7.0 GHz). The sample's Gilbert damping constant at 20 mK (\(\alpha_\mathrm{2b}\approx 2.3\times10^{-5}\)) is almost four times lower than its room-temperature value (\(\alpha_\mathrm{2a}\)).
+
+We recall that the measured damping constant is the sum of the intrinsic damping and the radiation damping, i.e. \(\alpha=\alpha_\mathrm{mag}+\alpha_\mathrm{rad}\). The radiation damping \(\alpha_\mathrm{rad}\) is expected to increase at low temperature (due to the \(M_\mathrm{s}\) dependence in [eq. 18](#chLWeqrad)). The data therefore suggest that the intrinsic contribution decreases as the temperature is lowered down to 20 mK:
+<a id="chLWeqalphamagnon"></a>
+$$
+\begin{align}
+\alpha_\mathrm{2b} < \alpha_\mathrm{2a} \quad \Rightarrow \quad \alpha_\mathrm{mag}(\text{T=20 mK})< \alpha_\mathrm{mag}(\text{T=300 K}).
+\end{align}
+$$
+
+Such a decrease in intrinsic damping is expected as most of the internal relaxation processes for the \(k=0\) mode, such as the Kasuya-LeCraw and the Kolokolov-L'vov-Cherepanov, are expected to become less effective as the temperature is lowered (see Section [Scattering with optical phonons or magnons](#scattering-with-optical-phonons-or-magnons)). We also learn from these results that the radiation damping only constitutes a small part of the total damping at room temperature (\(\alpha_\mathrm{2a}\)) --- this is not unexpected given the large spacing between the sample and the microstrip (\(d=540\) \(\mu\)m). 
+
+The inhomogeneous broadening contribution to the damping in the substrate-free YIG at 20 mK (\(\Delta f_{0,\mathrm{2b}}\)) is slightly higher than its value at room temperature (\(\Delta f_{0,\mathrm{2a}}\)). This is probably an artefact of the measurement procedure: the results at low temperature are obtained with high averaging, which likely inhomogeneously broadens the measured linewidths if the current source of the magnet is not completely drift-free.
+
+Results from the measurements of the YIG/GGG film, are very different. Its damping constant at \(20\) mK (\(\alpha_\mathrm{1b}\)) is \(3.4\) times *larger* than its value at room temperature (\(\alpha_\mathrm{1a}\)). In addition, the increase in the inhomogeneous contribution (\(\Delta f_{0, \mathrm{1b}}/\Delta f_{0, \mathrm{1a}}\approx 2.4\)) is also much larger than the increase seen for the substrate-free YIG (\(\Delta f_{0, \mathrm{2b}}/\Delta f_{0, \mathrm{2a}}\approx 1.2\)) and too large to be attributable to instability of the measurement setup. 
+
+Before any conclusions can be drawn from comparing the results of YIG/GGG and the substrate-free YIG samples, it is necessary to estimate the upper bound of the radiation damping contribution to the measured damping constant of YIG/GGG at 20 mK. The radiation damping, modelled according to eqn. (\ref{chLWeqrad}), depends on the geometry of the system and the saturation magnetisation \(M_\mathrm{s}\) of the sample. As characterisations at both 300 K and 20 mK are performed with the same configuration of microstrip and sample, it is reasonable to expect that the change in \(\alpha_\mathrm{rad}\) as the temperature is lowered is due solely to the change in \(M_\mathrm{s}\). Therefore, the increase in \(\alpha_\mathrm{rad}\) between 20 mK and 300 K is determined by the ratio of the saturation magnetisation, i.e. \(M_\mathrm{s}(20\) mK\()/M_\mathrm{s}(300\) K\()\approx 1.4\) [[Maier-Flaig2017](#Maier-Flaig2017)], and
+
+<a id="chLWeqalpharad"></a>
+$$
+\begin{align}
+\alpha_\mathrm{rad}(\text{T=20 mK}) \approx 1.4 \alpha_\mathrm{rad}(\text{T=300 K}).
+\end{align}
+$$
+
+If we assume that the measured damping constant (\(\alpha\)) of the YIG/GGG film only consists of  intrinsic damping within the YIG itself (\(\alpha_\mathrm{mag}\)) and the radiation damping contribution (\(\alpha_\mathrm{rad}\)), then taking into account [eq. 19](#chLWeqalphamagnon) and [eq. 20](#(\ref{chLWeqalpharad})), we can make the following argument:
+<a id="chLWeqalpha"></a>
+$$
+\begin{align}
+\alpha(\text{T=20 mK}) &=\alpha_\mathrm{mag}(\text{T=20 mK})+\alpha_\mathrm{rad}(\text{T=20 mK}), \\
+&\approx\alpha_\mathrm{mag}(\text{T=20 mK})+1.4 \alpha_\mathrm{rad}(\text{T=300 K}), \\
+& < \alpha_\mathrm{mag}(\text{T=300 K}) + 1.4 \alpha_\mathrm{rad}(\text{T=300 K}), \\
+& < 1.4 \left(\alpha_\mathrm{mag}(\text{T=300 K})+\alpha_\mathrm{rad}(\text{T=300 K})\right), \\
+\alpha(\text{T=20 mK})  & < 1.4 \alpha(\text{T=300 K}).
+\end{align}
+$$
+That is, the radiation damping accounts for, at most, an increase of approximately 1.4 times in the measured damping constant of the YIG/GGG sample when it is cooled from 300 K to 20 mK. Accordingly, the fact that we measure a much larger increase in the damping constant of the YIG/GGG sample, i.e. \(\alpha_\mathrm{1b}\approx 3.4 \alpha_\mathrm{1a}\), implies that there is an additional damping channel for magnons in the YIG/GGG film that is not accounted for in [eq. 21](#chLWeqalpha). As the difference between the YIG/GGG sample and the substrate-free YIG sample lies solely in the presence of the GGG substrate, our result is a strong indication that the GGG plays a significant role in increasing the magnon linewidths in the YIG/GGG sample at 20 mK.
+
+From [Table 1](#table1), we see that the damping constants and the inhomogeneous contributions for both samples at 20 mK increase when the input power is lowered (\(P_\mathrm{c}\)). As we shall explore in the next section, this behaviour can be understood by taking into account additional damping behaviour originating from two-level fluctuators (TLF, see Section [Two-level fluctuators](#two-level-fluctuators)) that are only significant at low temperature and low drive power.
+
+### Temperature-dependent damping
+<div id="fig-chLW_tdependent" align="center">
+  <img src="Tdep.png" alt="Temperature dependent magnon linewidths for YIG/GGG and substrate-free YIG">
+  <p>
+    <strong>Figure 15.</strong> Temperature (\(T\)) dependent magnon linewidths (\(\Delta f\)) for both YIG/GGG film and substrate-free YIG, measured with input power \(P_c=-100\) dBm. Note the different scaling in the vertical axis of the plots.
+  </p>
+</div>
+
+[Figure 15](#fig-chLW_tdependent) shows the temperature dependence of the magnon linewidth of both samples measured with low input power (\(P_\mathrm{c}=-100\) dBm). 
+
+When examining the results for YIG/GGG in [fig. 15](#fig-chLW_tdependent), the radiation damping contribution across the examined temperature range amounts to an approximately constant vertical offset to each dataset. This is due to the small change (less than 0.03\%) in the value of \(M_\mathrm{s}\) for YIG between 20 mK and 9 K [[Solt1962](#Solt1962)]. 
+
+Above 1 K, linewidths of both samples increase as the temperature is increased to 9 K. In this temperature regime, the dominant damping is usually associated with temperature-peak processes (see Section [Temperature-peak processes](#temperature-peak-processes)). When temperature-peak processes are dominant, the linewidth of the sample peaks at a characteristic temperature (\(T_\mathrm{ch}\)). 
+
+As discussed in Section [Temperature-peak processes](#temperature-peak-processes), the three known temperature-peak processes are due to rapidly-relaxing impurities, slowly-relaxing impurities, and the valence exchange mechanism. The rapidly relaxing model produces a Gilbert-like damping and has a characteristic temperature (\(T_\mathrm{ch}\)) that is independent of the magnon resonance frequency \(f_0\). The slowly-relaxing and the valence-exchange models exhibit a non-Gilbert-like form and a characteristic temperature (\(T_\mathrm{ch}\)) that reduces as the resonance frequency (\(f_0\)) is lowered. 
+
+The behaviour observed in [fig. 15](#fig-chLW_tdependent) at 9 K, in which the linewidth for \(f_0=4\) GHz is higher than that measured at \(f_0=7\) GHz, indicates that whatever mechanism is dominating the damping is not Gilbert-like in character; this immediately excludes the rapidly-relaxing model. The valence-exchange effect due to Fe\(^{2+}\) has previously been shown to be dominant above room temperature (as discussed in Section [Temperature-peak processes](#temperature-peak-processes)). By process of elimination, therefore, the slowly-relaxing model is the only mechanism that can be dominant at this temperature range.
+
+### Damping due to two-level fluctuators
+As the temperature is decreased below 1 K, the linewidth of the substrate-free YIG starts to increase and eventually saturates at mK temperatures as shown in [fig. 15](#fig-chLW_tdependent). We propose that this behaviour can be explained by the TLF model discussed in Section [Two-level fluctuators](#two-level-fluctuators). Note that previously this mechanism had only been observed in *bulk* YIG [[Tabuchi2014](#Tabuchi2014), [Pfirrmann2019](#Pfirrmann2019)].
+
+<div id="fig-chLW_psweep" align="center">
+  <img src="psweep.png" alt="Magnon linewidths as a function of input power at various temperatures">
+  <p>
+    <strong>Figure 16.</strong> Magnon linewidths \(\Delta f\) in the substrate-free YIG film as a function of input powers \(P\), obtained at 20 mK, 300 mK, and 1 K. The dashed lines are fits to the data.
+  </p>
+</div>
+
+Evidence for the TLF-induced damping is seen in [fig. 14](#fig-chLW_roomT_20mK), [fig. 16](#fig-chLW_psweep) and [fig. 17](#fig-chLW_psweep1). The 20 mK datasets in [fig. 14](#fig-chLW_roomT_20mK) show that the linewidths for both samples are lower when the drive level is higher (\(P_\mathrm{b}\) vs \(P_\mathrm{c}\)). This is confirmed by the extracted damping constants and inhomogeneous contribution terms obtained at low power \(P_\mathrm{c}\) which are found to be higher than the ones obtained at high power \(P_\mathrm{b}\) ([Table 1](#table1)). [Figure 16](#fig-chLW_psweep) shows the magnon linewidth of the substrate-free YIG as a function of drive levels \(P\) at three different temperatures (1 K, 300 mK, and 20 mK). At 1 K, there is no observable power dependence. We propose that this is because the TLFs have been saturated by thermal phonons. At 20 mK and 300 mK, the linewidths increase as the power decreases and saturate progressively as the temperature is reduced, in agreement with the previous discussions. The data are fitted using [eq. 16](#chLT_eqTLS) with an additional y-intercept to account for non-TLF contributions to the linewidth.
+
+For the \(f_0=5\) GHz,\(6\) GHz,\(7\) GHz dataset in [fig. 16](#fig-chLW_psweep), \(P_\mathrm{sat}\) at 300 mK is clearly higher than at 20 mK. This is in-line with expectations: \(\tau_1\) and \(\tau_2\), the TLF longitudinal and transverse relaxation times, are anticipated to decrease as the temperature is increased, leading to a higher \(P_\mathrm{sat}\) (recall that \(P_\mathrm{sat}\propto1/\tau_1\tau_2\) from previous chapter). The exact temperature dependence of \(1/\tau_1\tau_2\) is not clear. In previous experiments, a phenomenological model was suggested with the quantity \(1/\tau_1\tau_2\) varying from \(T^2\)  to \(T^4\) [[VonSchickfus1977](#VonSchickfus1977)]. This places the ratio \((P_\mathrm{sat}(300 \mathrm{mK})/P_\mathrm{sat}(20 \mathrm{mK}))_\mathrm{theory}\) in the range between 23.5 dB and 47 dB. The fitted \(P_\mathrm{sat}\) values from our data correspond to a ratio \((P_\mathrm{sat}(300 \mathrm{mK})/P_\mathrm{sat}(20 \mathrm{mK}))_\mathrm{data}\) of approximately 23 dB, suggestive of a \(T^2\) behaviour.
+
+It should be noted that the \(f_0=4\) GHz, \(T=300\) mK dataset in [fig. 16](#fig-chLW_psweep) is not fitted with the TLF model. Here, the TLF effect is very weak since there are sufficient thermal phonons to saturate those fluctuators with central frequencies around 4 GHz. 
+
+<div id="fig-chLW_psweep1" align="center">
+  <img src="psweep1.png" alt="Magnon linewidths of substrate-free YIG from 20 mK to 3 K">
+  <p>
+    <strong>Figure 17.</strong> Magnon linewidths \(\Delta f\) of the substrate-free YIG film from \(T=20\) mK to \(T=3\) K. <strong>(a)</strong> Comparison between the two different input powers \(P_\mathrm{b}=-65\) dBm and \(P_\mathrm{c}=-100\) dBm. <strong>(b)</strong> Comparison between different resonance frequencies \(f_0\) at input power \(P_\mathrm{b}=-65\) dBm.
+  </p>
+</div>
+
+[Figure 17(a)](#fig-chLW_psweep1) shows the manifestation of the TLF effect as a function of temperature. Above 1 K, linewidths for both input powers coincide. This is an indication that the relevant TLFs have been saturated by the thermal phonons.  At lower temperatures, the magnon linewidths for measured at both powers split, with the linewidths at low input power \(P_\mathrm{b}\) being higher than the ones at high input power \(P_\mathrm{c}\). 
+
+A quick comparison with the data in [fig. 16](#fig-chLW_psweep) shows that input power \(P_\mathrm{b}=-65\) dBm is not enough to saturate the TLFs at 300 mK. The datasets obtained with high drive level (\(P_\mathrm{b}\)) in [fig. 17(b)](#fig-chLW_psweep1) show that the linewidth difference \(\delta f = |\Delta f(f_0=7\) GHz\()-\Delta f(f_0=4\) GHz\()|\) broadens as the temperature is increased from 100 mK to 300 mK, narrowing back as the temperature reaches 1 K. If a much higher drive level were to be used, the TLFs would be expected to also be saturated (between 100 mK and 1 K) and we would predict a smaller value of \(\Delta f\).
+
+## Summary
+
+<div id="fig-chLW_relproc_1" align="center">
+  <img src="relproc_1.png" alt="Relaxation paths for uniformly-precessing microwave magnons in YIG films">
+  <p>
+    <strong>Figure 18.</strong> Relaxation paths for uniformly-precessing microwave magnons (\(k=0\)) in YIG <em>films</em>, from mK temperatures to room temperature.
+  </p>
+</div>
+
+For the first time, we have been able to show that GGG, the substrate on which YIG films are usually grown, plays an important role in increasing magnon linewidths at millikelvin temperatures (Section [Role of GGG at 20 mK](#role-of-ggg-at-20-mk)). Temperature-dependent linewidths above 1 K in YIG/GGG and substrate-free samples are associated with the slowly-relaxing-impurity mechanism typically observed in YIG with rare-earth impurities (Section [Temperature-dependent damping](#temperature-dependent-damping)). Damping due to the presence of unsaturated TLFs is observed in both YIG/GGG and substrate-free YIG films below 1 K (Section [Damping due to two-level fluctuators](#damping-due-to-two-level-fluctuators)). The TLF saturation power at 300 mK is found to be higher than at 20 mK; the ratio between the two values suggests a \(T^{-2}\)-dependent behaviour for the product of TLF relaxation times (\(\tau_1\tau_2\)). Furthermore, we verify that using high-drive power can lower the \(k=0\) magnon linewidth of substrate-free YIG down to \(\sim 1.4\) MHz (\(f_0\)=3.5 GHz to 7.0 GHz) at 20 mK --- lower than its room-temperature value and comparable to that measured in bulk YIG at 20 mK [[Tabuchi2014](#Tabuchi2014), [Pfirrmann2019](#Pfirrmann2019)]. [Figure 18](#fig-chLW_relproc_1) summarises the known relaxation paths for uniformly-precessing magnons in YIG *films* excited by a microwave field (compare this with those for *bulk* YIG, [fig. 1](#chLT_relproc)).
 
 # References
 
 [<a id="Akhiezer1968"></a>**Akhiezer1968**] Akhiezer, A.I., Bar'yakhtar, V.G., and Peletminskii, S.V. Spin Waves. North-Holland, Amsterdam, 1968. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Anderson1972"></a>**Anderson1972**] Anderson, P.W., Halperin, B.I., and Varma, C.M. "Anomalous Low-Temperature Thermal Properties of Glasses and Spin Glasses." Philosophical Magazine, vol. 25, no. 1, 1972, pp. 1–9. doi:10.1080/14786437208229210. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Boventer2018"></a>**Boventer2018**]
+Boventer, I., Pfirrmann, M., Krause, J., Schön, Y., Kläui, M., and Weides, M. “Complex Temperature Dependence of Coupling and Dissipation of Cavity Magnon Polaritons from Millikelvin to Room Temperature.” Physical Review B 97, no. 18 (2018): 184420. doi: <a href="https://doi.org/10.1103/PhysRevB.97.184420">10.1103/PhysRevB.97.184420</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
 
 [<a id="Buffler1959"></a>**Buffler1959**] Buffler, C.R. "Ferromagnetic Resonance near the Upper Limit of the Spin Wave Manifold." Journal of Applied Physics, vol. 30, no. 4, 1959, pp. S172–S175. doi:10.1063/1.2185872. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
@@ -303,6 +542,10 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 [<a id="Clogston1955"></a>**Clogston1955**] Clogston, A.M. "Relaxation Phenomena in Ferrites." Bell System Technical Journal, vol. 34, no. 4, 1955, pp. 739–760. doi:10.1002/j.1538-7305.1955.tb03774.x. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Clogston1956"></a>**Clogston1956**] Clogston, A.M., Suhl, H., Walker, L.R., and Anderson, P.W. "Ferromagnetic Resonance Line Width in Insulating Materials." Journal of Physics and Chemistry of Solids, vol. 1, no. 3, 1956, pp. 129–136. doi:10.1016/0022-3697(56)90019-1. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Danilov1989"></a>**Danilov1989**] Danilov, V.V., Lyfar', D.L., Lyubon'ko, Y.V., Nechiporuk, A.Y., and Ryabchenko, S.M. “Low-Temperature Ferromagnetic Resonance in Epitaxial Garnet Films on Paramagnetic Substrates.” Soviet Physics Journal 32, no. 4 (1989): 276–280. doi: <a href="https://doi.org/10.1007/BF00897267">10.1007/BF00897267</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Danilov2002"></a>**Danilov2002**] Danilov, V.V. and Nechiporuk, A.Y. “Experimental Investigation of the Quantum Amplification Effect for Magnetostatic Waves in Ferrite-Paramagnet Structures.” Technical Physics Letters 28, no. 5 (2002): 369–370. doi: <a href="https://doi.org/10.1134/1.1482739">10.1134/1.1482739</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="DeGennes1959"></a>**DeGennes1959**] De Gennes, P.G., Kittel, C., and Portis, A.M. "Theory of Ferromagnetic Resonance in Rare Earth Garnets. II. Line Widths." Physical Review, vol. 116, no. 2, 1959, pp. 323–330. doi:10.1103/PhysRev.116.323. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
@@ -324,11 +567,17 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 
 [<a id="Gurevich1996"></a>**Gurevich1996**] Gurevich, A.G. and Melkov, G.A. Magnetization Oscillations and Waves. CRC Press, Inc, 1996. ISBN: 978-0-8493-9460-7. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
+[<a id="Guslienko2002"></a>**Guslienko2002**] Guslienko, K.Y., Demokritov, S.O., Hillebrands, B., and Slavin, A.N. “Effective Dipolar Boundary Conditions for Dynamic Magnetization in Thin Magnetic Stripes.” Physical Review B 66, no. 13 (2002): 132402. doi: <a href="https://doi.org/10.1103/PhysRevB.66.132402">10.1103/PhysRevB.66.132402</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Guslienko2003"></a>**Guslienko2003**] Guslienko, K.Y., Chantrell, R.W., and Slavin, A.N. “Dipolar Localization of Quantized Spin-Wave Modes in Thin Rectangular Magnetic Elements.” Physical Review B 68, no. 2 (2003): 024422. doi: <a href="https://doi.org/10.1103/PhysRevB.68.024422">10.1103/PhysRevB.68.024422</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
 [<a id="Hansen1972"></a>H**ansen1972**] Hansen, P., Tolksdorf, W., and Schuldt, J. "Anisotropy and Magnetostriction of Germanium‐substituted Yttrium Iron Garnet." Journal of Applied Physics, vol. 43, no. 11, 1972, pp. 4740–4746. doi:10.1063/1.1660999. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="HartmannBoutron1964"></a>**HartmannBoutron1964**] Hartmann‐Boutron, F. "Effect of Rare‐earth Impurities on the Ferrimagnetic Resonance and Nuclear Relaxation in Yttrium Iron Garnet." Journal of Applied Physics, vol. 35, no. 3, 1964, pp. 889–891. doi:10.1063/1.1713521. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Hartwick1968"></a>**Hartwick1968**] Hartwick, T.S. and Smit, J. "Ferromagnetic Resonance in Si‐doped YIG." Journal of Applied Physics, vol. 39, no. 2, 1968, pp. 827–827. doi:10.1063/1.2163631. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Hurben1998"></a>**Hurben1998**] Hurben, M.J. and Patton, C.E. “Theory of Two Magnon Scattering Microwave Relaxation and Ferromagnetic Resonance Linewidth in Magnetic Thin Films.” Journal of Applied Physics 83, no. 8 (1998): 4344–4365. doi: <a href="https://doi.org/10.1063/1.367194">10.1063/1.367194</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Jermain2017"></a>**Jermain2017**] Jermain, C.L., Aradhya, S.V., Reynolds, N.D., Buhrman, R.A., Brangham, J.T., Page, M.R., Hammel, P.C., Yang, F.Y., and Ralph, D.C. "Increased Low-Temperature Damping in Yttrium Iron Garnet Thin Films." Physical Review B, vol. 95, no. 17, 2017, p. 174411. doi:10.1103/PhysRevB.95.174411. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
@@ -348,12 +597,19 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 
 [<a id="Kosen2019a"></a>**Kosen2019a**] Kosen, S. "Microwave Magnonics at Millikelvin Temperatures". PhD thesis, University of Oxford, 2019. doi: <a href="https://doi.org/10.5287/ORA-GOJQD8KQD">10.5287/ORA-GOJQD8KQD</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
+[<a id="Kostylev2016a"></a>**Kostylev2016a**] Kostylev, M. “Coupling of Microwave Magnetic Dynamics in Thin Ferromagnetic Films to Stripline Transducers in the Geometry of the Broadband Stripline Ferromagnetic Resonance.” Journal of Applied Physics 119, no. 1 (2016): 013901. doi: <a href="https://doi.org/10.1063/1.4939470">10.1063/1.4939470</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Landeros2008"></a>**Landeros2008**] Landeros, P., Arias, R.E., and Mills, D.L. “Two Magnon Scattering in Ultrathin Ferromagnets: The Case Where the Magnetization Is out of Plane.” Physical Review B 77, no. 21 (2008): 214405. doi: <a href="https://doi.org/10.1103/PhysRevB.77.214405">10.1103/PhysRevB.77.214405</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
 [<a id="LeCraw1958"></a>**LeCraw1958**] LeCraw, R.C., Spencer, E.G., and Porter, C.S. "Ferromagnetic Resonance Line Width in Yttrium Iron Garnet Single Crystals." Physical Review, vol. 110, no. 6, 1958, pp. 1311–1313. doi:10.1103/PhysRev.110.1311. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Maier-Flaig2017"></a>**Maier-Flaig2017**] Maier-Flaig, H., Klingler, S., Dubs, C., Surzhenko, O., Gross, R., Weiler, M., Huebl, H., and Goennenwein, S.T.B. "Temperature Dependent Magnetic Damping of Yttrium Iron Garnet Spheres." Physical Review B, vol. 95, no. 21, 2017, p. 214423. doi:10.1103/PhysRevB.95.214423. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
+[<a id="Maksymov2015"></a>**Maksymov2015**] Maksymov, I.S. and Kostylev, M. “Broadband Stripline Ferromagnetic Resonance Spectroscopy of Ferromagnetic Films, Multilayers and Nanostructures.” Physica E: Low-dimensional Systems and Nanostructures 69 (2015): 253–293. doi: <a href="https://doi.org/10.1016/j.physe.2014.12.027">10.1016/j.physe.2014.12.027</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Martinis2005"></a>**Martinis2005**] Martinis, J.M., Cooper, K.B., McDermott, R., Steffen, M., Ansmann, M., Osborn, K.D., Cicak, K., Oh, S.S., Pappas, D.P., Simmonds, R.W., and Yu, C.C. "Decoherence in Josephson Qubits from Dielectric Loss." Physical Review Letters, vol. 95, no. 21, 2005, p. 210503. doi:10.1103/PhysRevLett.95.210503. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="McMichael2004"></a>**McMichael2004**] McMichael, R.D. and Krivosik, P. “Classical Model of Extrinsic Ferromagnetic Resonance Linewidth in Ultrathin Films.” IEEE Transactions on Magnetics 40, no. 1 (2004): 2–11. doi: <a href="https://doi.org/10.1109/TMAG.2003.821564">10.1109/TMAG.2003.821564</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Mihalceanu2018"></a>**Mihalceanu2018**] Mihalceanu, L., Vasyuchka, V.I., Bozhko, D.A., Langner, T., Nechiporuk, A.Y., Romanyuk, V.F., Hillebrands, B., and Serga, A.A. "Temperature-Dependent Relaxation of Dipole-Exchange Magnons in Yttrium Iron Garnet Films." Physical Review B, vol. 97, no. 21, 2018, p. 214405. doi:10.1103/PhysRevB.97.214405. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
@@ -361,11 +617,23 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 
 [<a id="Orbach1961"></a>**Orbach1961**] Orbach, R. "Spin-Lattice Relaxation in Rare-Earth Salts." Proceedings of the Royal Society of London. Series A. Mathematical and Physical Sciences, vol. 264, no. 1319, 1961, pp. 458–484. doi:10.1098/rspa.1961.0211. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
+[<a id="Petrenko1999"></a>**Petrenko1999**] Petrenko, O.A., Paul, D.M., Ritter, C., Zeiske, T., and Yethiraj, M. “Magnetic Frustration and Order in Gadolinium Gallium Garnet.” Physica B: Condensed Matter 266, no. 1–2 (1999): 41–48. doi: <a href="https://doi.org/10.1016/S0921-4526(98)01490-2">10.1016/S0921-4526(98)01490-2</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
 [<a id="Pfirrmann2019"></a>**Pfirrmann2019**] Pfirrmann, M., Boventer, I., Schneider, A., Wolz, T., Kläui, M., Ustinov, A.V., and Weides, M. "Magnons at Low Excitations: Observation of Incoherent Coupling to a Bath of Two-Level-Systems." Unpublished, 2019. arXiv:1903.03981. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Phillips1987"></a>**Phillips1987**] Phillips, W.A. "Two-Level States in Glasses." Reports on Progress in Physics, vol. 50, no. 12, 1987, pp. 1657–1708. doi:10.1088/0034-4885/50/12/003. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
+[<a id="Rousseau2017"></a>**Rousseau2017**] Rousseau, A., Parent, J.-M., and Quilliam, J.A. “Anisotropic Phase Diagram and Spin Fluctuations of the Hyperkagome Magnet Gd3Ga5O12 as Revealed by Sound Velocity Measurements.” Physical Review B 96, no. 6 (2017): 060411(R). doi: <a href="https://doi.org/10.1103/PhysRevB.96.060411">10.1103/PhysRevB.96.060411</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Schiffer1994"></a>**Schiffer1994**] Schiffer, P., Ramirez, A.P., Huse, D.A., and Valentino, A.J. “Investigation of the Field Induced Antiferromagnetic Phase Transition in the Frustrated Magnet: Gadolinium Gallium Garnet.” Physical Review Letters 73, no. 18 (1994): 2500–2503. doi: <a href="https://doi.org/10.1103/PhysRevLett.73.2500">10.1103/PhysRevLett.73.2500</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Schiffer1995"></a>**Schiffer1995**] Schiffer, P., Ramirez, A.P., Huse, D.A., Gammel, P.L., Yaron, U., Bishop, D.J., and Valentino, A.J. “Frustration Induced Spin Freezing in a Site-Ordered Magnet: Gadolinium Gallium Garnet.” Physical Review Letters 74, no. 12 (1995): 2379–2382. doi: <a href="https://doi.org/10.1103/PhysRevLett.74.2379">10.1103/PhysRevLett.74.2379</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Schlomann1960"></a>**Schlomann1960**] Schlömann, E., Green, J.J., and Milano, U. “Recent Developments in Ferromagnetic Resonance at High Power Levels.” Journal of Applied Physics 31, no. 5 (1960): S386–S395. doi: <a href="https://doi.org/10.1063/1.1984759">10.1063/1.1984759</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
 [<a id="Seiden1964"></a>**Seiden1964**] Seiden, P.E. "Ferrimagnetic Resonance Relaxation in Rare‐earth Iron Garnets." Journal of Applied Physics, vol. 35, no. 3, 1964, p. 891. doi:10.1063/1.1713522. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Serga2010"></a>**Serga2010**] Serga, A.A., Chumak, A.V., and Hillebrands, B. “YIG Magnonics.” Journal of Physics D: Applied Physics 43, no. 26 (2010): 264002. doi: <a href="https://doi.org/10.1088/0022-3727/43/26/264002">10.1088/0022-3727/43/26/264002</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Solt1962"></a>**Solt1962**] Solt, I.H. "Temperature Dependence of YIG Magnetization." Journal of Applied Physics, vol. 33, no. 3, 1962, pp. 1189–1191. doi:10.1063/1.1728651. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
@@ -376,6 +644,8 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 [<a id="Spencer1959"></a>**Spencer1959**] Spencer, E.G., LeCraw, R.C., and Clogston, A.M. "Low-Temperature Line-Width Maximum in Yttrium Iron Garnet." Physical Review Letters, vol. 3, no. 1, 1959, pp. 32–33. doi:10.1103/PhysRevLett.3.32. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Spencer1961"></a>**Spencer1961**] Spencer, E.G., LeCraw, R.C., and Linares, R.C. "Low-Temperature Ferromagnetic Relaxation in Yttrium Iron Garnet." Physical Review, vol. 123, no. 6, 1961, pp. 1937–1938. doi:10.1103/PhysRev.123.1937. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Stancil2009a"></a>**Stancil2009a**] Stancil, D.D. and Prabhakar, A. Spin Waves: Theory and Applications. Boston, MA: Springer US, 2009. doi: <a href="https://doi.org/10.1007/978-0-387-77865-5">10.1007/978-0-387-77865-5</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Tabuchi2014"></a>**Tabuchi2014**] Tabuchi, Y., Ishino, S., Ishikawa, T., Yamazaki, R., Usami, K., and Nakamura, Y. "Hybridizing Ferromagnetic Magnons and Microwave Photons in the Quantum Limit." Physical Review Letters, vol. 113, no. 8, 2014, p. 083603. doi:10.1103/PhysRevLett.113.083603. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
@@ -391,13 +661,19 @@ As we shall discover in the next chapter, in the case of YIG **films**, there is
 
 [<a id="VanVleck1964"></a>**VanVleck1964**] Van Vleck, J.H. "Ferrimagnetic Resonance of Rare‐earth‐doped Iron Garnets." Journal of Applied Physics, vol. 35, no. 3, 1964, pp. 882–888. doi:10.1063/1.1713520. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
+[<a id="VonSchickfus1977"></a>**VonSchickfus1977**] Von Schickfus, M. and Hunklinger, S. “Saturation of the Dielectric Absorption of Vitreous Silica at Low Temperatures.” Physics Letters A 64, no. 1 (1977): 144–146. doi: <a href="https://doi.org/10.1016/0375-9601(77)90558-8">10.1016/0375-9601(77)90558-8</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
 [<a id="Walker1965"></a>**Walker1965**] Walker, L.R. "Ferromagnetic-Relaxation Theory. Marshall Sparks." Science, vol. 148, no. 3667, 1965, p. 218. doi:10.1126/science.148.3667.218. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Wijn1953"></a>**Wijn1953**] Wijn, H.P.J. and van der Heide, H. "A Richter Type After-Effect in Ferrites Containing Ferrous and Ferric Ions." Reviews of Modern Physics, vol. 25, no. 1, 1953, pp. 98–99. doi:10.1103/RevModPhys.25.98. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Yager1955"></a>**Yager1955**] Yager, W.A., Galt, J.K., and Merritt, F.R. "Ferromagnetic Resonance in Two Nickel-Iron Ferrites." Physical Review, vol. 99, no. 4, 1955, pp. 1203–1210. doi:10.1103/PhysRev.99.1203. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
+[<a id="Zhang2014"></a>**Zhang2014**] Zhang, X.F., Zou, C.-L., Jiang, L., and Tang, H.X. “Strongly Coupled Magnons and Cavity Microwave Photons.” Physical Review Letters 113, no. 15 (2014): 156401. doi: <a href="https://doi.org/10.1103/PhysRevLett.113.156401">10.1103/PhysRevLett.113.156401</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
 [<a id="Zhang2015"></a>**Zhang2015**] Zhang, D.K., Wang, X.-M. and Li, T.-F., Luo, X.-Q., Wu, W.D., Nori, F., and You, J.Q. "Cavity Quantum Electrodynamics with Ferromagnetic Magnons in a Small Yttrium-Iron-Garnet Sphere." npj Quantum Information, vol. 1, no. 1, 2015, p. 15014. doi:10.1038/npjqi.2015.14. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
+
+[<a id="Zhang2016"></a>**Zhang2016**] Zhang, X., Zou, C., Jiang, L., and Tang, H.X. “Superstrong Coupling of Thin Film Magnetostatic Waves with Microwave Cavity.” Journal of Applied Physics 119, no. 2 (2016): 4939134. doi: <a href="https://doi.org/10.1063/1.4939134">10.1063/1.4939134</a>. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
 [<a id="Zmuidzinas2012"></a>**Zmuidzinas2012**] Zmuidzinas, J. "Superconducting Microresonators: Physics and Applications." Annual Review of Condensed Matter Physics, vol. 3, no. 1, 2012, pp. 169–214. doi:10.1146/annurev-conmatphys-020911-125022. <a href="javascript:history.back()">← Back</a>, <a href="#top">↑ Top</a>
 
